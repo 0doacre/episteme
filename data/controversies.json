@@ -1,0 +1,267 @@
+[
+  {
+    "id": "ia-conscience",
+    "domain": "Neurosciences & IA",
+    "title": "Théories de la conscience & Architecture des LLM",
+    "definition": "Divergence épistémologique et neurobiologique sur la possibilité qu'un modèle de langage computationnel fasse émerger une phénoménologie de la conscience (ressenti subjectif / 'qualia'), ou s'il s'agit intrinsèquement d'une simulation formelle dépourvue de réalité ontologique.",
+    "guardrail": "Rejet formel des postures animistes, anthropomorphiques naïves ou mystiques non fondées scientifiquement. Le débat oppose rigoureusement des modèles fonctionnalistes d'intégration d'information à des approches biologiques incarnationnistes (embodied cognition).",
+    "positions": [
+      {
+        "name": "Fonctionnalisme computationnel & Théorie de l'Espace de Travail Global (GNWT)",
+        "summary": "La conscience découle d'une architecture fonctionnelle de traitement de l'information. Si un système intègre, synthétise et diffuse des flux d'informations multi-agents à l'échelle globale de son architecture pour arbitrer l'action, il peut instancier des états conscients indépendamment de son substrat biologique.",
+        "keyFigures": ["Stanislas Dehaene", "Daniel Dennett", "Yoshua Bengio"]
+      },
+      {
+        "name": "Biologisme strict & Théorie de l'Information Intégrée (IIT)",
+        "summary": "La conscience requiert des structures causales réentrantes intrinsèques et un ancrage sensori-moteur indissociable du métabolisme vivant. Un algorithme sur machine de von Neumann ne fait qu'exécuter une simulation symbolique externe : son score Φ (intégration causale) reste nul.",
+        "keyFigures": ["Giulio Tononi", "John Searle", "Christof Koch"]
+      }
+    ],
+    "readings": [
+      {
+        "level": "Facile",
+        "title": "L'IA peut-elle ressentir ? Enjeux et illusions d'attribution",
+        "type": "Vulgarisation réflexive",
+        "author": "Pour la Science / Cerveau & Psycho",
+        "link": "https://www.pourlascience.fr/sr/intelligence-artificielle/",
+        "note": "Excellente clarification conceptuelle sur la distinction entre performance linguistique et expérience subjective."
+      },
+      {
+        "level": "Moyen",
+        "title": "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+        "type": "Rapport de consensus critique",
+        "author": "Butlin, Long, Bengio et al. (2023)",
+        "link": "https://arxiv.org/abs/2308.08708",
+        "note": "Évaluation méthodique et exhaustive des architectures IA contemporaines au regard des théories scientifiques majeures."
+      },
+      {
+        "level": "Difficile",
+        "title": "Integrated Information Theory (IIT) 4.0: Formulating the Properties of Phenomenal Existence",
+        "type": "Article fondateur",
+        "author": "Albantakis, Tononi et al. (PLOS Computational Biology)",
+        "link": "https://doi.org/10.1371/journal.pcbi.1011465",
+        "note": "Formalisation mathématique des postulats ontologiques et du calcul de Φ."
+      },
+      {
+        "level": "Expert",
+        "title": "Consciousness and the Brain: Deciphering How the Brain Codes Our Thoughts",
+        "type": "Monographie expérimentale",
+        "author": "Stanislas Dehaene (Viking Press / Odile Jacob)",
+        "link": "https://www.odilejacob.fr/catalogue/sciences/neurosciences/code-de-la-conscience_9782738131058.php",
+        "note": "Identification expérimentale des quatre signatures neurophysiologiques de l'accès à la conscience."
+      }
+    ]
+  },
+  {
+    "id": "pedagogie-explicite",
+    "domain": "Sciences de l'Éducation",
+    "title": "Enseignement explicite vs Pédagogies par découverte guidée",
+    "definition": "Débat méthodologique et didactique portant sur l'efficacité comparée de l'enseignement direct/structuré (Direct Instruction) face aux approches constructivistes d'exploration problématisée, à la lumière de la théorie de la charge cognitive.",
+    "guardrail": "Rejet des caricatures idéologiques ('autoritarisme passéiste' vs 'laxisme démagogique'). La controverse est méthodologique, appuyée sur des méta-analyses quantitatives confrontées à l'écologie complexe des apprentissages conceptuels en classe.",
+    "positions": [
+      {
+        "name": "Paradigme de l'Enseignement Explicite (EDI & Cognitive Load Theory)",
+        "summary": "Compte tenu des limites structurales de la mémoire de travail (4 à 7 éléments), l'acquisition d'un nouveau savoir conceptuel exige un guidage maximal : modelage explicite par l'enseignant, pratique guidée répétée, feed-back immédiat, puis pratique autonome.",
+        "keyFigures": ["John Sweller", "Paul A. Kirschner", "Clermont Gauthier"]
+      },
+      {
+        "name": "Paradigme de l'Échec Productif et de la Problématisation",
+        "summary": "Le guidage procédural immédiat favorise la restitution rapide mais nuit au transfert lointain et à la compréhension profonde. Une phase préalable d'exploration et de tâtonnement (échec productif) active les schémas cognitifs pertinents et maximise la consolidation.",
+        "keyFigures": ["Manu Kapur", "Roland Charnay", "Yves Chevallard"]
+      }
+    ],
+    "readings": [
+      {
+        "level": "Facile",
+        "title": "Pourquoi l'enseignement explicite fait débat",
+        "type": "Synthèse professionnelle",
+        "author": "Institut Français de l'Éducation (IFÉ)",
+        "link": "https://veille-et-analyses.ens-lyon.fr/DA-Veille/115-fevrier-2017.pdf",
+        "note": "Clarification sémantique indispensable entre enseignement traditionnel transmissif et enseignement explicite outillé."
+      },
+      {
+        "level": "Moyen",
+        "title": "Why Minimal Guidance During Instruction Does Not Work",
+        "type": "Article de référence",
+        "author": "Kirschner, Sweller & Clark (Educational Psychologist, 2006)",
+        "link": "https://doi.org/10.1207/s15326985ep4102_1",
+        "note": "L'article manifeste ayant déclenché les débats contemporains sur l'alignement pédagogique avec l'architecture cognitive."
+      },
+      {
+        "level": "Difficile",
+        "title": "Productive Failure in Learning Math",
+        "type": "Étude empirique contrôlée",
+        "author": "Manu Kapur (Cognitive Science, 2014)",
+        "link": "https://doi.org/10.1111/cogs.12107",
+        "note": "Protocole expérimental rigoureux comparant direct instruction seule versus phase d'exploration inductive suivie de formalisation."
+      },
+      {
+        "level": "Expert",
+        "title": "Visible Learning: The Sequel — A Synthesis of Over 2,100 Meta-Analyses",
+        "type": "Méta-synthèse quantitative",
+        "author": "John Hattie (Routledge, 2023)",
+        "link": "https://www.routledge.com/Visible-Learning-The-Sequel-A-Synthesis-of-Over-2100-Meta-Analyses-Relating-to-Achievement/Hattie/p/book/9781032462035",
+        "note": "Analyse statistique macroscopique des tailles d'effet (Cohen's d) des différentes modalités d'intervention pédagogique."
+      }
+    ]
+  },
+  {
+    "id": "physique-tout",
+    "domain": "Physique fondamentale",
+    "title": "Unification : Théorie des Cordes vs Gravité Quantique à Boucles",
+    "definition": "Tentative de résoudre l'incompatibilité fondamentale entre la Relativité Générale (espace-temps continu et dynamique régissant la gravitation) et la Mécanique Quantique (nature discrète et probabiliste de la matière), dans un cadre d'inaccessibilité expérimentale directe à l'échelle de Planck (10⁻³⁵ m).",
+    "guardrail": "Exclusion catégorique des dérives ésotériques ou pseudosciences exploitant le vocable 'quantique'. Le débat porte sur le statut épistémologique de théories sans vérification empirique immédiate (critère de réfutabilité poppérienne).",
+    "positions": [
+      {
+        "name": "Théorie des Cordes (M-Theory & Supersymétrie)",
+        "summary": "Les particules ponctuelles sont remplacées par des cordes unidimensionnelles vibrant dans un espace-temps doté de dimensions spatiales compactifiées (10 ou 11 dimensions). Elle incorpore naturellement le graviton et vise l'unification totale des quatre interactions fondamentales.",
+        "keyFigures": ["Edward Witten", "Brian Greene", "Leonard Susskind"]
+      },
+      {
+        "name": "Gravité Quantique à Boucles (Loop Quantum Gravity - LQG)",
+        "summary": "Approche non-perturbative et strictement indépendante du fond (background independent). L'espace-temps n'est pas une arène continue externe, mais un tissu quantifié formé d'un réseau de spins discrets dont les mailles définissent le volume et la surface minimale.",
+        "keyFigures": ["Carlo Rovelli", "Lee Smolin", "Abhay Ashtekar"]
+      }
+    ],
+    "readings": [
+      {
+        "level": "Facile",
+        "title": "Par-delà le visible : La réalité du monde quantique",
+        "type": "Essai de vulgarisation conceptuelle",
+        "author": "Carlo Rovelli (Odile Jacob)",
+        "link": "https://www.odilejacob.fr/catalogue/sciences/physique-chimie/par-dela-le-visible_9782738135087.php",
+        "note": "Une introduction lumineuse et sans mathématiques lourdes à l'idée d'un espace-temps granulaire."
+      },
+      {
+        "level": "Moyen",
+        "title": "The Trouble with Physics: The Rise of String Theory, the Fall of a Science",
+        "type": "Essai critique et épistémologique",
+        "author": "Lee Smolin (Mariner Books)",
+        "link": "https://www.goodreads.com/book/show/108939.The_Trouble_with_Physics",
+        "note": "Une radiographie stimulante de la sociologie de la recherche en physique théorique et du risque d'hégémonie académique."
+      },
+      {
+        "level": "Difficile",
+        "title": "Covariant Loop Quantum Gravity: An Elementary Introduction to Quantum Gravity and Spinfoam Theory",
+        "type": "Manuel académique",
+        "author": "Carlo Rovelli & Francesca Vidotto (Cambridge University Press)",
+        "link": "https://doi.org/10.1017/CBO9781107706910",
+        "note": "Formalisation mathématique rigoureuse de la dynamique des mousses de spin et de l'invariance par difféomorphisme."
+      },
+      {
+        "level": "Expert",
+        "title": "Superstring Theory (Volumes 1 & 2)",
+        "type": "Traité canonique",
+        "author": "Michael Green, John Schwarz & Edward Witten (Cambridge University Press)",
+        "link": "https://doi.org/10.1017/CBO9781107706286",
+        "note": "Le socle mathématique complet fondant la révolution des supercordes et la supersymétrie d'espace-temps."
+      }
+    ]
+  },
+  {
+    "id": "psycho-evo",
+    "domain": "Sciences Cognitives & Anthropologie",
+    "title": "Psychologie Évolutionniste : Modularité massive vs Plasticité culturelle",
+    "definition": "Désaccord sur la part respective des modules cognitifs spécialisés sélectionnés au Pléistocène et de la plasticité neuronale co-façonnée par la culture cumulative dans l'explication des comportements humains contemporains.",
+    "guardrail": "Rejet absolu du darwinisme social, du réductionnisme génétique simpliste et des légitimations idéologiques des inégalités. Le débat confronte des hypothèses d'architecture cognitive soumises aux contraintes phylogénétiques et anthropologiques.",
+    "positions": [
+      {
+        "name": "Thèse de la Modularité Massive (Adaptationnisme cognitif)",
+        "summary": "L'esprit humain est une collection de centaines de modules mentaux spécialisés (algorithmes darwiniens), façonnés par la sélection naturelle pour résoudre des problèmes adaptatifs ancestraux spécifiques (détection des tricheurs, évitement des toxines, choix de partenaire).",
+        "keyFigures": ["Leda Cosmides", "John Tooby", "Steven Pinker"]
+      },
+      {
+        "name": "Co-évolution Gène-Culture & Plasticité Étendue",
+        "summary": "L'adaptationnisme strict sous-estime la plasticité développementale et la causalité descendante de la culture cumulative. L'environnement d'adaptabilité ancestrale (EEA) est souvent reconstruit 'a posteriori' de manière spéculative ('just-so stories').",
+        "keyFigures": ["Joseph Henrich", "Stephen Jay Gould", "Kevin Laland"]
+      }
+    ],
+    "readings": [
+      {
+        "level": "Facile",
+        "title": "L'animal social à l'épreuve de l'évolution",
+        "type": "Synthèse interdisciplinaire",
+        "author": "Revue Sciences Humaines (Grands Dossiers)",
+        "link": "https://www.scienceshumaines.com/",
+        "note": "Présentation pédagogique des principaux axes de friction entre anthropologie culturelle et sociobiologie."
+      },
+      {
+        "level": "Moyen",
+        "title": "The Adapted Mind: Evolutionary Psychology and the Generation of Culture",
+        "type": "Recueil fondateur",
+        "author": "Jerome H. Barkow, Leda Cosmides & John Tooby (Oxford University Press)",
+        "link": "https://global.oup.com/academic/product/the-adapted-mind-9780195101072",
+        "note": "L'ouvrage fondateur qui a posé le cadre conceptuel standard de la psychologie évolutionniste contemporaine."
+      },
+      {
+        "level": "Difficile",
+        "title": "The Spandrels of San Marco and the Panglossian Paradigm: A Critique of the Adaptationist Programme",
+        "type": "Article épistémologique historique",
+        "author": "Stephen Jay Gould & Richard Lewontin (Proc. R. Soc. Lond. B, 1979)",
+        "link": "https://doi.org/10.1098/rspb.1979.0086",
+        "note": "Texte séminal dénonçant le biais consistant à traiter tout trait comportemental comme une adaptation sélectionnée."
+      },
+      {
+        "level": "Expert",
+        "title": "The WEIRDest People in the World: How the West Became Psychologically Peculiar and Particularly Prosperous",
+        "type": "Monographie anthropologique & quantitative",
+        "author": "Joseph Henrich (Farrar, Straus and Giroux)",
+        "link": "https://us.macmillan.com/books/9780374173227/theweirdestpeopleintheworld",
+        "note": "Démonstration empirique de la co-évolution gène-culture et de la variation psychologique interculturelle profonde."
+      }
+    ]
+  },
+  {
+    "id": "economie-comportementale",
+    "domain": "Économie & Sciences de la Décision",
+    "title": "Rationalité Limitée vs Théorie du Choix Rationnel",
+    "definition": "Divergence théorique et empirique entre le paradigme néoclassique fondant l'analyse sur des agents maximisateurs parfaitement rationnels (homo economicus) et l'économie comportementale démontrant des biais cognitifs et heuristiques systématiques.",
+    "guardrail": "Exclusion des pamphlets anticapitalistes primaires comme des postures dogmatiques rejetant les données expérimentales. Le débat concerne la puissance prédictive, la parcimonie formelle et la validité descriptive des axiomes de rationalité.",
+    "positions": [
+      {
+        "name": "Paradigme Néoclassique & Théorie du Choix Rationnel",
+        "summary": "Même si les individus font ponctuellement des erreurs, celles-ci se neutralisent au niveau agrégé par les forces du marché et les incitations concurrentielles. L'hypothèse de rationalité reste le socle prédictif le plus robuste, parcimonieux et universel.",
+        "keyFigures": ["Gary Becker", "Milton Friedman", "Eugene Fama"]
+      },
+      {
+        "name": "Économie Comportementale & Rationalité Limitée",
+        "summary": "Les agents humains opèrent sous contraintes cognitives et temporelles en mobilisant des raccourcis heuristiques qui engendrent des déviations systématiques et prédictibles (aversion aux pertes, surconfiance, ancrage, comptabilité mentale).",
+        "keyFigures": ["Daniel Kahneman", "Amos Tversky", "Herbert Simon", "Richard Thaler"]
+      }
+    ],
+    "readings": [
+      {
+        "level": "Facile",
+        "title": "Système 1 / Système 2 : Les deux vitesses de la pensée",
+        "type": "Vulgarisation réflexive majeure",
+        "author": "Daniel Kahneman (Flammarion)",
+        "link": "https://editions.flammarion.com/systeme-1-systeme-2/9782081211477",
+        "note": "Le panorama complet et captivant des mécanismes cognitifs influençant nos jugements et nos décisions sous incertitude."
+      },
+      {
+        "level": "Moyen",
+        "title": "Judgment under Uncertainty: Heuristics and Biases",
+        "type": "Article de référence",
+        "author": "Amos Tversky & Daniel Kahneman (Science, 1974)",
+        "link": "https://doi.org/10.1126/science.185.4157.1124",
+        "note": "L'article séminal ayant formellement identifié les heuristiques de représentativité, de disponibilité et d'ancrage."
+      },
+      {
+        "level": "Difficile",
+        "title": "Prospect Theory: An Analysis of Decision under Risk",
+        "type": "Article fondateur de modélisation",
+        "author": "Daniel Kahneman & Amos Tversky (Econometrica, 1979)",
+        "link": "https://doi.org/10.2307/1914185",
+        "note": "Formalisation mathématique de la fonction de valeur en S remplaçant la théorie classique de l'utilité espérée."
+      },
+      {
+        "level": "Expert",
+        "title": "Advances in Behavioral Economics",
+        "type": "Traité théorique et empirique",
+        "author": "Colin F. Camerer, George Loewenstein & Matthew Rabin (Princeton University Press)",
+        "link": "https://press.princeton.edu/books/paperback/9780691116822/advances-in-behavioral-economics",
+        "note": "La somme académique intégrant la neuroéconomie, les jeux stratégiques et les équilibres de marché comportementaux."
+      }
+    ]
+  }
+]

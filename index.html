@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Épistémê — Cartographie des Controverses Scientifiques & Épistémiques</title>
+  <meta name="description" content="Outil didactique d'exploration des controverses scientifiques actives : gardes-fous épistémiques, corpus graduels et atelier de décentration constructive.">
+  
+  <!-- Fonts Google : Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            notion: {
+              bg: '#141414',
+              sidebar: '#191919',
+              card: '#1f1f1f',
+              cardHover: '#252525',
+              hover: '#292929',
+              border: '#2e2e2e',
+              borderLight: '#3f3f3f',
+              text: '#ededed',
+              muted: '#a0a0a0',
+              subtle: '#666666',
+              tag: '#262626',
+              accent: '#f5f5f5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      background-color: #141414;
+      color: #ededed;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #141414;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2e2e2e;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #444444;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .badge-facile { background-color: rgba(34, 197, 94, 0.12); color: #86efac; border-color: rgba(34, 197, 94, 0.3); }
+    .badge-moyen { background-color: rgba(59, 130, 246, 0.12); color: #93c5fd; border-color: rgba(59, 130, 246, 0.3); }
+    .badge-difficile { background-color: rgba(234, 179, 8, 0.12); color: #fde047; border-color: rgba(234, 179, 8, 0.3); }
+    .badge-expert { background-color: rgba(239, 68, 68, 0.12); color: #fca5a5; border-color: rgba(239, 68, 68, 0.3); }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-neutral-700 selection:text-white text-sm">
+
+  <!-- En-tête sobre style Notion/Linear -->
+  <header class="border-b border-notion-border bg-notion-sidebar/90 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-neutral-300 shadow-[0_0_8px_rgba(255,255,255,0.4)]"></span>
+        <span class="font-semibold tracking-tight text-sm text-neutral-100">Épistémê</span>
+        <span class="text-xs text-notion-muted border-l border-notion-border pl-3 hidden sm:inline">
+          Cartographie Didactique des Controverses Scientifiques
+        </span>
+      </div>
+      
+      <!-- Actions : Importer, Exporter, Reset -->
+      <div class="flex items-center gap-2 text-xs">
+        <label for="jsonUpload" class="cursor-pointer px-2.5 py-1.5 rounded border border-notion-border hover:border-notion-borderLight hover:bg-notion-hover text-notion-muted hover:text-neutral-100 transition-colors flex items-center gap-1.5" title="Importer un fichier JSON de controverses">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+          <span class="hidden md:inline">Importer JSON</span>
+        </label>
+        <input type="file" id="jsonUpload" accept=".json" class="hidden">
+
+        <button onclick="exportCorpus()" class="px-2.5 py-1.5 rounded border border-notion-border hover:border-notion-borderLight hover:bg-notion-hover text-notion-muted hover:text-neutral-100 transition-colors flex items-center gap-1.5" title="Télécharger le corpus actuel au format JSON">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span class="hidden md:inline">Exporter JSON</span>
+        </button>
+
+        <button onclick="resetDefaultCorpus()" class="px-2 py-1.5 rounded border border-notion-border hover:border-notion-borderLight hover:bg-notion-hover text-notion-subtle hover:text-neutral-300 transition-colors" title="Réinitialiser au corpus initial">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenu Principal -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+    
+    <!-- Volet latéral : Filtres & Liste -->
+    <aside class="md:col-span-4 lg:col-span-3 flex flex-col gap-4">
+      
+      <!-- Filtres de domaine -->
+      <div class="flex flex-col gap-1.5">
+        <label class="text-[11px] font-semibold tracking-wider uppercase text-notion-subtle px-1">Domaines</label>
+        <div id="domainFilters" class="flex flex-wrap gap-1.5">
+          <!-- Injecté dynamiquement en JS -->
+        </div>
+      </div>
+
+      <!-- Barre de recherche -->
+      <div class="relative">
+        <svg class="w-3.5 h-3.5 absolute left-3 top-2.5 text-notion-subtle" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        <input type="text" id="searchInput" placeholder="Chercher une controverse, auteur..."
+          class="w-full bg-notion-card border border-notion-border text-xs rounded pl-8 pr-3 py-2 text-neutral-200 placeholder-notion-subtle focus:outline-none focus:border-neutral-400 transition-colors">
+      </div>
+
+      <!-- Liste des controverses -->
+      <div class="flex flex-col gap-1.5 flex-1">
+        <div class="flex items-center justify-between px-1">
+          <label class="text-[11px] font-semibold tracking-wider uppercase text-notion-subtle">Controverses actives</label>
+          <span id="countDisputes" class="text-[11px] font-mono text-notion-muted">0</span>
+        </div>
+        <div id="disputeList" class="flex flex-col gap-1.5 max-h-[calc(100vh-280px)] overflow-y-auto pr-1">
+          <!-- Injecté dynamiquement en JS -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- Zone principale : Fiche détaillée de la controverse -->
+    <section class="md:col-span-8 lg:col-span-9 bg-notion-card border border-notion-border rounded-lg p-6 flex flex-col gap-6 shadow-sm" id="detailContainer">
+      <!-- Injecté dynamiquement en JS -->
+    </section>
+  </main>
+
+  <!-- Toast notification flottant -->
+  <div id="toast" class="fixed bottom-5 right-5 bg-neutral-900 border border-notion-borderLight text-neutral-200 text-xs px-4 py-2.5 rounded shadow-lg transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center gap-2">
+    <span id="toastIcon">✓</span>
+    <span id="toastMessage">Action effectuée</span>
+  </div>
+
+  <script>
+    // Corpus initial avec 5 controverses structurées selon les règles didactiques (No False Balance & QSV)
+    const DEFAULT_CONTROVERSIES = [
+      {
+        id: "ia-conscience",
+        domain: "Neurosciences & IA",
+        title: "Théories de la conscience & Architecture des LLM",
+        definition: "Divergence épistémologique et neurobiologique sur la possibilité qu'un modèle computationnel fasse émerger une phénoménologie de la conscience (ressenti subjectif / qualia), ou s'il s'agit intrinsèquement d'une simulation formelle dépourvue de réalité ontologique.",
+        guardrail: "Rejet formel des postures animistes, anthropomorphiques naïves ou mystiques non fondées scientifiquement. Le débat oppose rigoureusement des modèles fonctionnalistes d'intégration d'information à des approches biologiques incarnationnistes (embodied cognition).",
+        positions: [
+          {
+            name: "Fonctionnalisme computationnel & Théorie de l'Espace de Travail Global (GNWT)",
+            summary: "La conscience découle d'une architecture fonctionnelle de traitement de l'information. Si un système intègre, synthétise et diffuse des flux d'informations multi-agents à l'échelle globale de son architecture pour arbitrer l'action, il peut instancier des états conscients indépendamment de son substrat biologique.",
+            keyFigures: ["Stanislas Dehaene", "Daniel Dennett", "Yoshua Bengio"]
+          },
+          {
+            name: "Biologisme strict & Théorie de l'Information Intégrée (IIT)",
+            summary: "La conscience requiert des structures causales réentrantes intrinsèques et un ancrage sensori-moteur indissociable du métabolisme vivant. Un algorithme sur machine de von Neumann ne fait qu'exécuter une simulation symbolique externe : son score Φ (intégration causale) reste nul.",
+            keyFigures: ["Giulio Tononi", "John Searle", "Christof Koch"]
+          }
+        ],
+        readings: [
+          {
+            level: "Facile",
+            title: "L'IA peut-elle ressentir ? Enjeux et illusions d'attribution",
+            type: "Vulgarisation réflexive",
+            author: "Pour la Science / Cerveau & Psycho",
+            link: "https://www.pourlascience.fr/sr/intelligence-artificielle/",
+            note: "Excellente clarification conceptuelle sur la distinction entre performance linguistique et expérience subjective."
+          },
+          {
+            level: "Moyen",
+            title: "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness",
+            type: "Rapport de consensus critique",
+            author: "Butlin, Long, Bengio et al. (2023)",
+            link: "https://arxiv.org/abs/2308.08708",
+            note: "Évaluation méthodique et exhaustive des architectures IA contemporaines au regard des théories scientifiques majeures."
+          },
+          {
+            level: "Difficile",
+            title: "Integrated Information Theory (IIT) 4.0: Formulating the Properties of Phenomenal Existence",
+            type: "Article fondateur",
+            author: "Albantakis, Tononi et al. (PLOS Computational Biology)",
+            link: "https://doi.org/10.1371/journal.pcbi.1011465",
+            note: "Formalisation mathématique des postulats ontologiques et du calcul de Φ."
+          },
+          {
+            level: "Expert",
+            title: "Consciousness and the Brain: Deciphering How the Brain Codes Our Thoughts",
+            type: "Monographie expérimentale",
+            author: "Stanislas Dehaene (Viking / Odile Jacob)",
+            link: "https://www.odilejacob.fr/catalogue/sciences/neurosciences/code-de-la-conscience_9782738131058.php",
+            note: "Identification expérimentale des quatre signatures neurophysiologiques de l'accès à la conscience."
+          }
+        ]
+      },
+      {
+        id: "pedagogie-explicite",
+        domain: "Sciences de l'Éducation",
+        title: "Enseignement explicite vs Pédagogies par découverte guidée",
+        definition: "Débat méthodologique et didactique portant sur l'efficacité comparée de l'enseignement direct/structuré (Direct Instruction) face aux démarches constructivistes de découverte problématisée, à la lumière de la théorie de la charge cognitive.",
+        guardrail: "Rejet des caricatures idéologiques ('autoritarisme passéiste' vs 'laxisme démagogique'). La controverse est méthodologique, appuyée sur des méta-analyses quantitatives confrontées à l'écologie complexe des apprentissages conceptuels en classe.",
+        positions: [
+          {
+            name: "Paradigme de l'Enseignement Explicite (EDI & Cognitive Load Theory)",
+            summary: "Compte tenu des limites structurales de la mémoire de travail (4 à 7 éléments), l'acquisition d'un nouveau savoir conceptuel exige un guidage maximal : modelage pas à pas, pratique guidée, feed-back immédiat puis pratique autonome.",
+            keyFigures: ["John Sweller", "Paul A. Kirschner", "Clermont Gauthier"]
+          },
+          {
+            name: "Paradigme de l'Échec Productif et de la Problématisation",
+            summary: "Le guidage procédural immédiat favorise la restitution rapide mais nuit au transfert lointain et à la compréhension profonde. Une phase préalable d'exploration et de tâtonnement (échec productif) active les schémas cognitifs pertinents.",
+            keyFigures: ["Manu Kapur", "Roland Charnay", "Yves Chevallard"]
+          }
+        ],
+        readings: [
+          {
+            level: "Facile",
+            title: "Pourquoi l'enseignement explicite fait débat",
+            type: "Synthèse professionnelle",
+            author: "Institut Français de l'Éducation (IFÉ)",
+            link: "https://veille-et-analyses.ens-lyon.fr/DA-Veille/115-fevrier-2017.pdf",
+            note: "Clarification sémantique indispensable entre enseignement traditionnel transmissif et enseignement explicite outillé."
+          },
+          {
+            level: "Moyen",
+            title: "Why Minimal Guidance During Instruction Does Not Work",
+            type: "Article de référence",
+            author: "Kirschner, Sweller & Clark (Educational Psychologist, 2006)",
+            link: "https://doi.org/10.1207/s15326985ep4102_1",
+            note: "Le texte canonique déclencheur de la controverse contemporaine sur le guidage didactique."
+          },
+          {
+            level: "Difficile",
+            title: "Productive Failure in Learning Math",
+            type: "Étude empirique contrôlée",
+            author: "Manu Kapur (Cognitive Science, 2014)",
+            link: "https://doi.org/10.1111/cogs.12107",
+            note: "Démonstration des bénéfices de la phase exploratoire initiale face au guidage immédiat."
+          },
+          {
+            level: "Expert",
+            title: "Visible Learning: The Sequel — A Synthesis of Over 2,100 Meta-Analyses",
+            type: "Méta-synthèse quantitative",
+            author: "John Hattie (Routledge, 2023)",
+            link: "https://www.routledge.com/Visible-Learning-The-Sequel-A-Synthesis-of-Over-2100-Meta-Analyses-Relating-to-Achievement/Hattie/p/book/9781032462035",
+            note: "Analyse des tailles d'effet (Cohen's d) selon les types de tâches, de rétroactions et de guidages."
+          }
+        ]
+      },
+      {
+        id: "physique-tout",
+        domain: "Physique fondamentale",
+        title: "Unification : Théorie des Cordes vs Gravité Quantique à Boucles",
+        definition: "Tentative de réconcilier la Relativité Générale d'Einstein (espace-temps continu et dynamique) et la Mécanique Quantique (nature discrète et probabiliste), dans un contexte d'inaccessibilité expérimentale directe à l'échelle de Planck.",
+        guardrail: "Exclusion catégorique des dérives ésotériques ou pseudosciences 'quantiques'. La controverse porte sur la validité épistémologique de théories sans confirmation empirique immédiate (critère de réfutabilité poppérienne).",
+        positions: [
+          {
+            name: "Théorie des Cordes (M-Theory & Supersymétrie)",
+            summary: "Les constituants fondamentaux sont des cordes unidimensionnelles vibrant dans un espace-temps à dimensions supplémentaires (10 ou 11 dimensions). Elle incorpore naturellement le graviton et vise l'unification des quatre interactions.",
+            keyFigures: ["Edward Witten", "Brian Greene", "Leonard Susskind"]
+          },
+          {
+            name: "Gravité Quantique à Boucles (Loop Quantum Gravity - LQG)",
+            summary: "Théorie non-perturbative et strictement indépendante du fond (background independent) : l'espace-temps lui-même n'est pas une arène préexistante, mais un réseau de spin discret composé de quantas élémentaires d'espace.",
+            keyFigures: ["Carlo Rovelli", "Lee Smolin", "Abhay Ashtekar"]
+          }
+        ],
+        readings: [
+          {
+            level: "Facile",
+            title: "Par-delà le visible : La réalité du monde quantique",
+            type: "Essai grand public",
+            author: "Carlo Rovelli (Odile Jacob)",
+            link: "https://www.odilejacob.fr/catalogue/sciences/physique-chimie/par-dela-le-visible_9782738135087.php",
+            note: "Introduction conceptuelle lumineuse sans formalisme mathématique lourd."
+          },
+          {
+            level: "Moyen",
+            title: "The Trouble with Physics: The Rise of String Theory, the Fall of a Science",
+            type: "Essai épistémologique",
+            author: "Lee Smolin (Mariner Books)",
+            link: "https://www.goodreads.com/book/show/108939.The_Trouble_with_Physics",
+            note: "Critique de la prédominance académique des cordes et plaidoyer pour la diversité méthodologique."
+          },
+          {
+            level: "Difficile",
+            title: "Covariant Loop Quantum Gravity",
+            type: "Cours académique avancé",
+            author: "Carlo Rovelli & Francesca Vidotto (Cambridge University Press)",
+            link: "https://doi.org/10.1017/CBO9781107706910",
+            note: "Formalisation rigoureuse de la dynamique des mousses de spin."
+          },
+          {
+            level: "Expert",
+            title: "Superstring Theory (Vol. 1 & 2)",
+            type: "Traité théorique canonique",
+            author: "Green, Schwarz & Witten (Cambridge University Press)",
+            link: "https://doi.org/10.1017/CBO9781107706286",
+            note: "Le socle mathématique exhaustif fondant la supersymétrie d'espace-temps."
+          }
+        ]
+      },
+      {
+        id: "psycho-evo",
+        domain: "Sciences Cognitives & Anthropologie",
+        title: "Psychologie Évolutionniste : Modularité massive vs Plasticité culturelle",
+        definition: "Désaccord sur l'ampleur des adaptations cognitives sélectionnées au Pléistocène : l'esprit humain est-il une collection de modules spécialisés façonnés par l'évolution, ou un système général hautement plastique co-façonné par la culture cumulative ?",
+        guardrail: "Rejet total du darwinisme social, du réductionnisme génétique simpliste et des légitimations idéologiques des inégalités. Le débat confronte des modèles d'architecture cognitive soumis à des contraintes phylogénétiques et anthropologiques rigoureuses.",
+        positions: [
+          {
+            name: "Thèse de la Modularité massive (Adaptationnisme cognitif)",
+            summary: "Le cerveau est structuré en modules spécifiques résolvant des problèmes adaptatifs ancestraux (détection des tricheurs, évitement des toxines, choix de partenaires, calculs de parentèle).",
+            keyFigures: ["Leda Cosmides", "John Tooby", "Steven Pinker"]
+          },
+          {
+            name: "Co-évolution gène-culture & Plasticité étendue",
+            summary: "L'adaptationnisme strict sous-estime la plasticité neuronale et l'effet cliquet de la culture cumulative. L'environnement d'adaptation ancestrale (EEA) est souvent reconstruit 'a posteriori' (just-so stories).",
+            keyFigures: ["Joseph Henrich", "Stephen Jay Gould", "Kevin Laland"]
+          }
+        ],
+        readings: [
+          {
+            level: "Facile",
+            title: "L'animal social à l'épreuve de l'évolution",
+            type: "Synthèse interdisciplinaire",
+            author: "Sciences Humaines",
+            link: "https://www.scienceshumaines.com/",
+            note: "Vue d'ensemble équilibrée des tensions théoriques entre anthropologie et sociobiologie."
+          },
+          {
+            level: "Moyen",
+            title: "The Adapted Mind: Evolutionary Psychology and the Generation of Culture",
+            type: "Recueil fondateur",
+            author: "Barkow, Cosmides & Tooby (Oxford University Press)",
+            link: "https://global.oup.com/academic/product/the-adapted-mind-9780195101072",
+            note: "L'acte de naissance de la psychologie évolutionniste contemporaine."
+          },
+          {
+            level: "Difficile",
+            title: "The Spandrels of San Marco and the Panglossian Paradigm",
+            type: "Article épistémologique historique",
+            author: "Gould & Lewontin (Proc. R. Soc. Lond. B, 1979)",
+            link: "https://doi.org/10.1098/rspb.1979.0086",
+            note: "Critique majeure du biais ultra-adaptationniste en biologie de l'évolution."
+          },
+          {
+            level: "Expert",
+            title: "The WEIRDest People in the World",
+            type: "Monographie anthropologique & quantitative",
+            author: "Joseph Henrich (Farrar, Straus and Giroux)",
+            link: "https://us.macmillan.com/books/9780374173227/theweirdestpeopleintheworld",
+            note: "Modélisation empirique de la co-évolution gène-culture et de la plasticité psychologique."
+          }
+        ]
+      },
+      {
+        id: "economie-comportementale",
+        domain: "Économie & Sciences de la Décision",
+        title: "Rationalité Limitée vs Théorie du Choix Rationnel",
+        definition: "Divergence entre le paradigme néoclassique fondant la décision sur l'optimisation rationnelle des agents (homo economicus) et le programme des heuristiques et biais démontrant des écarts systématiques et prévisibles à la rationalité formelle.",
+        guardrail: "Exclusion des pamphlets anticapitalistes comme des dénis d'expérimentation. Le débat est méthodologique et porte sur la validité empirique des axiomes de rationalité vs la parcimonie et la testabilité des modèles microéconomiques.",
+        positions: [
+          {
+            name: "Paradigme Néoclassique & Choix Rationnel",
+            summary: "Même si les agents individuels commettent des erreurs, celles-ci sont non biaisées et neutralisées à l'échelle agrégée par les mécanismes d'arbitrage et la concurrence de marché. L'hypothèse de rationalité reste le socle prédictif le plus robuste et parcimonieux.",
+            keyFigures: ["Gary Becker", "Milton Friedman", "Eugene Fama"]
+          },
+          {
+            name: "Économie Comportementale & Rationalité Limitée",
+            summary: "Les agents humains opèrent sous contraintes cognitives et temporelles en mobilisant des heuristiques qui engendrent des déviations systématiques et mesurables (aversion aux pertes, biais de cadrage, actualisation hyperbolique).",
+            keyFigures: ["Daniel Kahneman", "Amos Tversky", "Herbert Simon", "Richard Thaler"]
+          }
+        ],
+        readings: [
+          {
+            level: "Facile",
+            title: "Système 1 / Système 2 : Les deux vitesses de la pensée",
+            type: "Vulgarisation réflexive majeure",
+            author: "Daniel Kahneman (Flammarion)",
+            link: "https://editions.flammarion.com/systeme-1-systeme-2/9782081211477",
+            note: "Le tour d'horizon accessible de l'architecture cognitive de la prise de décision."
+          },
+          {
+            level: "Moyen",
+            title: "Judgment under Uncertainty: Heuristics and Biases",
+            type: "Article de référence",
+            author: "Tversky & Kahneman (Science, 1974)",
+            link: "https://doi.org/10.1126/science.185.4157.1124",
+            note: "L'article séminal ayant défini les heuristiques de représentativité, d'ancrage et de disponibilité."
+          },
+          {
+            level: "Difficile",
+            title: "Prospect Theory: An Analysis of Decision under Risk",
+            type: "Article fondateur de modélisation",
+            author: "Kahneman & Tversky (Econometrica, 1979)",
+            link: "https://doi.org/10.2307/1914185",
+            note: "Formalisation mathématique de la valeur en S et de la pondération non linéaire des probabilités."
+          },
+          {
+            level: "Expert",
+            title: "Advances in Behavioral Economics",
+            type: "Traité contemporain",
+            author: "Camerer, Loewenstein & Rabin (Princeton University Press)",
+            link: "https://press.princeton.edu/books/paperback/9780691116822/advances-in-behavioral-economics",
+            note: "Somme académique intégrant la neuroéconomie et la théorie des jeux comportementale."
+          }
+        ]
+      }
+    ];
+
+    // État de l'application avec persistance localStorage
+    const STORAGE_KEY = "episteme_controversies_v1";
+    const NOTES_KEY_PREFIX = "episteme_note_";
+
+    let controversies = loadControversies();
+    let currentDisputeId = controversies[0]?.id || "";
+    let selectedDomain = "Tous";
+
+    function loadControversies() {
+      try {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      } catch (e) {
+        console.warn("Erreur chargement localStorage", e);
+      }
+      return DEFAULT_CONTROVERSIES;
+    }
+
+    function saveControversies(data) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      } catch (e) {
+        console.warn("Erreur sauvegarde localStorage", e);
+      }
+    }
+
+    function getDomains() {
+      const set = new Set(controversies.map(c => c.domain));
+      return ["Tous", ...Array.from(set)];
+    }
+
+    function renderFilters() {
+      const container = document.getElementById("domainFilters");
+      const domains = getDomains();
+      container.innerHTML = domains.map(d => {
+        const isActive = selectedDomain === d;
+        return `
+          <button onclick="setDomain('${d}')"
+            class="text-[11px] px-2.5 py-1 rounded transition-colors ${
+              isActive 
+                ? 'bg-neutral-200 text-neutral-900 font-semibold shadow-sm' 
+                : 'bg-notion-sidebar border border-notion-border text-notion-muted hover:border-notion-borderLight hover:text-neutral-200'
+            }">
+            ${d}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function setDomain(d) {
+      selectedDomain = d;
+      renderFilters();
+      renderList();
+    }
+
+    function renderList() {
+      const query = document.getElementById("searchInput").value.toLowerCase().trim();
+      const filtered = controversies.filter(c => {
+        const matchesDomain = selectedDomain === "Tous" || c.domain === selectedDomain;
+        const matchesQuery = 
+          c.title.toLowerCase().includes(query) ||
+          c.domain.toLowerCase().includes(query) ||
+          c.definition.toLowerCase().includes(query) ||
+          c.positions.some(p => p.name.toLowerCase().includes(query) || p.keyFigures.some(f => f.toLowerCase().includes(query)));
+        return matchesDomain && matchesQuery;
+      });
+
+      document.getElementById("countDisputes").innerText = filtered.length;
+      const listEl = document.getElementById("disputeList");
+
+      if (filtered.length === 0) {
+        listEl.innerHTML = `<div class="text-xs text-notion-subtle p-3 italic text-center">Aucune controverse trouvée.</div>`;
+        return;
+      }
+
+      // Si la sélection actuelle n'est pas dans les résultats filtrés, on sélectionne la 1ère
+      if (!filtered.some(c => c.id === currentDisputeId)) {
+        currentDisputeId = filtered[0].id;
+        renderDetail();
+      }
+
+      listEl.innerHTML = filtered.map(c => {
+        const isSelected = c.id === currentDisputeId;
+        return `
+          <button onclick="selectDispute('${c.id}')"
+            class="w-full text-left p-2.5 rounded text-xs transition-all border ${
+              isSelected 
+                ? 'bg-notion-cardHover border-notion-borderLight text-neutral-100 font-medium shadow-sm' 
+                : 'bg-transparent border-transparent text-notion-muted hover:text-neutral-200 hover:bg-notion-sidebar/60'
+            }">
+            <div class="text-[10px] text-notion-subtle uppercase tracking-wider mb-0.5 truncate">${c.domain}</div>
+            <div class="line-clamp-2 leading-snug">${c.title}</div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectDispute(id) {
+      currentDisputeId = id;
+      renderList();
+      renderDetail();
+    }
+
+    function getLevelBadgeClass(level) {
+      switch (level) {
+        case 'Facile': return 'badge-facile';
+        case 'Moyen': return 'badge-moyen';
+        case 'Difficile': return 'badge-difficile';
+        case 'Expert': return 'badge-expert';
+        default: return 'text-neutral-400 border-neutral-700 bg-neutral-800/40';
+      }
+    }
+
+    function getReadingUrl(reading) {
+      if (reading.link && reading.link !== "#" && reading.link.startsWith("http")) {
+        return reading.link;
+      }
+      // Générer une recherche Google Scholar / web pertinente si pas d'URL directe
+      const query = encodeURIComponent(`${reading.title} ${reading.author}`);
+      return `https://scholar.google.com/scholar?q=${query}`;
+    }
+
+    function renderDetail() {
+      const c = controversies.find(item => item.id === currentDisputeId);
+      const container = document.getElementById("detailContainer");
+      if (!c) {
+        container.innerHTML = `<div class="text-xs text-notion-subtle">Sélectionnez une controverse pour afficher les détails.</div>`;
+        return;
+      }
+
+      // Récupérer la note d'atelier sauvegardée pour cette controverse
+      const savedNote = localStorage.getItem(NOTES_KEY_PREFIX + c.id) || "";
+      const savedLean = localStorage.getItem(NOTES_KEY_PREFIX + c.id + "_lean") || "1";
+
+      container.innerHTML = `
+        <!-- Titre & Domaine -->
+        <div class="border-b border-notion-border pb-4 flex flex-col gap-1.5">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] font-mono text-notion-subtle uppercase tracking-wider">${c.domain}</span>
+            <span class="text-[11px] font-mono text-neutral-500">ID: ${c.id}</span>
+          </div>
+          <h1 class="text-xl md:text-2xl font-bold text-neutral-100 tracking-tight leading-tight">${c.title}</h1>
+        </div>
+
+        <!-- Définition de la ligne de fracture -->
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-notion-muted">
+            <svg class="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>Définition de la ligne de fracture épistémique</span>
+          </div>
+          <div class="text-sm text-neutral-200 leading-relaxed bg-notion-sidebar p-4 rounded-md border border-notion-border font-normal">
+            ${c.definition}
+          </div>
+        </div>
+
+        <!-- Garde-fou épistémique (Anti-Faux Équilibre) -->
+        <div class="p-4 rounded-md border border-neutral-800 bg-neutral-900/80 flex items-start gap-3 shadow-inner">
+          <div class="w-5 h-5 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center shrink-0 text-neutral-400 text-xs font-mono font-bold mt-0.5">§</div>
+          <div class="space-y-1">
+            <div class="text-[11px] font-semibold tracking-wider uppercase text-neutral-300">
+              Garde-fou méthodologique & Anti-faux équilibre
+            </div>
+            <p class="text-xs text-notion-muted leading-relaxed font-light">
+              ${c.guardrail}
+            </p>
+          </div>
+        </div>
+
+        <!-- Les deux pôles rationnels de la controverse -->
+        <div class="space-y-2.5">
+          <div class="text-xs font-semibold uppercase tracking-wider text-notion-muted">
+            Positions rationnelles en présence
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            ${c.positions.map((pos, idx) => `
+              <div class="bg-notion-sidebar border border-notion-border hover:border-notion-borderLight rounded-md p-4 flex flex-col justify-between transition-colors">
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-mono font-semibold text-neutral-400 bg-neutral-800/80 px-2 py-0.5 rounded border border-neutral-700">
+                      THÈSE 0${idx + 1}
+                    </span>
+                  </div>
+                  <h3 class="text-sm font-semibold text-neutral-200 leading-snug">${pos.name}</h3>
+                  <p class="text-xs text-notion-muted leading-relaxed font-normal">${pos.summary}</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-notion-border/60 text-[11px] text-notion-subtle">
+                  Auteurs repères : <span class="text-neutral-300 font-medium">${pos.keyFigures.join(', ')}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Progression de lecture graduée (4 paliers) -->
+        <div class="space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="text-xs font-semibold uppercase tracking-wider text-notion-muted">Corpus documentaire graduel</div>
+            <span class="text-[11px] text-notion-subtle font-mono">4 paliers d'exigence épistémique</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            ${c.readings.map(r => {
+              const url = getReadingUrl(r);
+              return `
+                <div class="border border-notion-border bg-notion-sidebar hover:border-notion-borderLight rounded-md p-3.5 flex flex-col justify-between gap-3 transition-colors">
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="inline-block text-[10px] font-mono font-medium border px-1.5 py-0.5 rounded ${getLevelBadgeClass(r.level)}">
+                        ${r.level}
+                      </span>
+                      <span class="text-[10px] text-neutral-500 font-mono italic truncate max-w-[110px]">${r.type}</span>
+                    </div>
+                    <a href="${url}" target="_blank" rel="noopener noreferrer" 
+                       class="group inline-flex items-start gap-1 text-xs font-medium text-neutral-200 hover:text-white leading-snug">
+                      <span class="line-clamp-2 underline decoration-neutral-700 underline-offset-2 group-hover:decoration-neutral-400">${r.title}</span>
+                      <svg class="w-3 h-3 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                    <div class="text-[11px] text-notion-subtle font-medium">${r.author}</div>
+                  </div>
+                  <p class="text-[11px] text-notion-muted leading-relaxed border-t border-notion-border/50 pt-2.5 font-light">
+                    ${r.note}
+                  </p>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+
+        <!-- Atelier interactif de décentration (Protocole de Johnson & Johnson) -->
+        <div class="border-t border-notion-border pt-5 flex flex-col gap-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono font-semibold text-neutral-300 uppercase tracking-wider">Atelier de Décentration</span>
+              <span class="text-[10px] font-mono text-neutral-500 border border-neutral-800 rounded px-1.5 py-0.5">Johnson & Johnson</span>
+            </div>
+            <span class="text-[11px] text-notion-subtle">Principe de charité épistémique</span>
+          </div>
+
+          <div class="bg-neutral-900/90 border border-notion-borderLight rounded-md p-4 space-y-3">
+            <div class="text-xs text-neutral-300">
+              <span class="font-medium text-neutral-200">1. Mon intuition spontanée penche vers :</span>
+              <div class="mt-2 flex flex-wrap gap-2 text-xs">
+                <label class="cursor-pointer flex items-center gap-2 px-2.5 py-1.5 rounded border ${savedLean === '1' ? 'border-neutral-400 bg-neutral-800 text-white' : 'border-notion-border bg-notion-sidebar text-notion-muted'} transition-colors">
+                  <input type="radio" name="lean" value="1" ${savedLean === '1' ? 'checked' : ''} onchange="updateLean('1')" class="hidden">
+                  <span>Thèse 01 : ${c.positions[0]?.name.slice(0, 36)}...</span>
+                </label>
+                <label class="cursor-pointer flex items-center gap-2 px-2.5 py-1.5 rounded border ${savedLean === '2' ? 'border-neutral-400 bg-neutral-800 text-white' : 'border-notion-border bg-notion-sidebar text-notion-muted'} transition-colors">
+                  <input type="radio" name="lean" value="2" ${savedLean === '2' ? 'checked' : ''} onchange="updateLean('2')" class="hidden">
+                  <span>Thèse 02 : ${c.positions[1]?.name.slice(0, 36)}...</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="space-y-1.5 pt-1">
+              <label for="decentrationNote" class="block text-xs text-neutral-300 font-medium">
+                2. Exercice du Steelman — Défendez en quelques lignes la position 
+                <strong class="text-neutral-100">${savedLean === '1' ? 'adverse (Thèse 02)' : 'adverse (Thèse 01)'}</strong> :
+              </label>
+              <textarea id="decentrationNote" rows="3" 
+                placeholder="Exposez les prémisses et les arguments les plus solides de la position opposée, sans caricature..."
+                oninput="saveNote(this.value)"
+                class="w-full bg-notion-sidebar border border-notion-border rounded p-3 text-xs text-neutral-100 placeholder-notion-subtle focus:outline-none focus:border-neutral-400 transition-colors leading-relaxed font-sans">${savedNote}</textarea>
+            </div>
+
+            <div class="flex items-center justify-between text-[11px] text-notion-subtle pt-1">
+              <span id="charCount">${savedNote.length} caractères</span>
+              <div class="flex items-center gap-2">
+                <button onclick="clearCurrentNote()" class="hover:text-neutral-300 transition-colors">Effacer</button>
+                <button onclick="copyCurrentNote()" class="px-2.5 py-1 rounded border border-neutral-700 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 transition-colors">
+                  Copier l'argument
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Gestion de l'atelier de décentration
+    function updateLean(value) {
+      localStorage.setItem(NOTES_KEY_PREFIX + currentDisputeId + "_lean", value);
+      renderDetail();
+    }
+
+    function saveNote(value) {
+      localStorage.setItem(NOTES_KEY_PREFIX + currentDisputeId, value);
+      const countEl = document.getElementById("charCount");
+      if (countEl) countEl.innerText = `${value.length} caractères`;
+    }
+
+    function clearCurrentNote() {
+      const textarea = document.getElementById("decentrationNote");
+      if (textarea) {
+        textarea.value = "";
+        saveNote("");
+      }
+    }
+
+    function copyCurrentNote() {
+      const note = localStorage.getItem(NOTES_KEY_PREFIX + currentDisputeId) || "";
+      if (!note.trim()) {
+        showToast("Rédigez d'abord votre argument !", "ℹ️");
+        return;
+      }
+      navigator.clipboard.writeText(note).then(() => {
+        showToast("Argument copié dans le presse-papiers !", "✓");
+      }).catch(() => {
+        showToast("Erreur lors de la copie", "⚠️");
+      });
+    }
+
+    // Gestion de l'import JSON
+    document.getElementById('jsonUpload').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        try {
+          const imported = JSON.parse(event.target.result);
+          if (Array.isArray(imported) && imported.length > 0 && imported[0].id && imported[0].title) {
+            controversies = imported;
+            saveControversies(controversies);
+            currentDisputeId = controversies[0].id;
+            selectedDomain = "Tous";
+            renderFilters();
+            renderList();
+            renderDetail();
+            showToast(`${imported.length} controverses importées avec succès !`, "✓");
+          } else {
+            alert("Erreur de format : Le fichier JSON doit être un tableau d'objets respectant le schéma Épistémê (champs obligatoires: id, domain, title, definition, positions, readings).");
+          }
+        } catch (err) {
+          alert("Erreur de lecture du JSON : " + err.message);
+        }
+      };
+      reader.readAsText(file);
+      e.target.value = '';
+    });
+
+    // Gestion de l'export JSON
+    function exportCorpus() {
+      const jsonStr = JSON.stringify(controversies, null, 2);
+      const blob = new Blob([jsonStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `episteme_corpus_${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast("Corpus téléchargé !", "⬇️");
+    }
+
+    // Réinitialisation au corpus par défaut
+    function resetDefaultCorpus() {
+      if (confirm("Réinitialiser le corpus aux controverses didactiques initiales ?")) {
+        controversies = DEFAULT_CONTROVERSIES;
+        saveControversies(controversies);
+        currentDisputeId = controversies[0].id;
+        selectedDomain = "Tous";
+        renderFilters();
+        renderList();
+        renderDetail();
+        showToast("Corpus réinitialisé par défaut", "↺");
+      }
+    }
+
+    // Système de notification Toast
+    function showToast(message, icon = "✓") {
+      const toast = document.getElementById("toast");
+      const msgEl = document.getElementById("toastMessage");
+      const iconEl = document.getElementById("toastIcon");
+      if (!toast || !msgEl || !iconEl) return;
+
+      msgEl.innerText = message;
+      iconEl.innerText = icon;
+      toast.classList.remove("opacity-0", "pointer-events-none");
+      toast.classList.add("opacity-100");
+
+      setTimeout(() => {
+        toast.classList.remove("opacity-100");
+        toast.classList.add("opacity-0", "pointer-events-none");
+      }, 3000);
+    }
+
+    // Initialisation au chargement
+    document.getElementById("searchInput").addEventListener("input", renderList);
+    renderFilters();
+    renderList();
+    renderDetail();
+  </script>
+</body>
+</html>
