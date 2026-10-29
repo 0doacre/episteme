@@ -3,32 +3,51 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Format](https://img.shields.io/badge/Format-Standalone_HTML5-emerald.svg)](index.html)
 [![UI](https://img.shields.io/badge/Theme-Notion_%2F_Linear-neutral.svg)](index.html)
+[![HAS](https://img.shields.io/badge/Méthodologie-Niveaux_de_Preuve_HAS-blueviolet.svg)](index.html)
 
-**Épistémê** est une application web autonome et minimaliste conçue pour explorer et travailler sur les controverses scientifiques actives à travers le prisme de la didactique des sciences et des **Questions Socialement Vives (QSV)**.
+**Épistémê** est une application web didactique autonome conçue pour explorer et maîtriser en profondeur les controverses scientifiques contemporaines à travers le prisme de la didactique des sciences, des **Questions Socialement Vives (QSV)** et de l'évaluation méthodologique selon les **niveaux de preuve de la Haute Autorité de Santé (HAS)**.
 
-L'application permet d'échapper au dogmatisme comme au relativisme naïf, en fournissant une grille rigoureuse d'analyse, un corpus documentaire gradué à 4 paliers et un atelier de décentration cognitive (méthode de Johnson & Johnson).
-
----
-
-## 🧭 Principes Épistémologiques & Didactiques
-
-1. **La controverse comme moteur de la science (*Science-in-the-making*) :**
-   Le savoir scientifique n'est pas un bloc statique de dogmes tombés du ciel, mais une dynamique d'épreuves empiriques, de débats méthodologiques et d'arbitrages de pairs. Aborder un domaine par ses lignes de fracture permet de comprendre la fabrication de la preuve.
-2. **Le filtre Anti-Faux Équilibre (*No False Balance*) :**
-   Une controverse scientifique n'est pas une confrontation d'opinions médiatiques. Elle ne réunit que des positions rationnelles et étayées au sein du champ académique. Sont formellement exclus : les négationnismes, pseudosciences, complotismes et dénis de consensus établis (ex. climat, vaccination).
-3. **La progression documentaire à 4 paliers :**
-   - **Facile :** Vulgarisation réflexive et clarification conceptuelle sans jargon inutile.
-   - **Moyen :** Articles de référence, revues de littérature et synthèses méthodologiques.
-   - **Difficile :** Articles de recherche primaires avec formalisation et données empiriques.
-   - **Expert :** Traités canoniques, monographies universitaires et méta-analyses exhaustives.
-4. **Atelier de Décentration (*Steelman* & Johnson & Johnson) :**
-   Pour valider l'appropriation rationnelle d'un sujet, l'app invite l'apprenant à formuler avec un maximum de charité épistémique le meilleur argument de la position adverse.
+L'objectif d'Épistémê est d'offrir une substance intellectuelle dense et immédiatement assimilable : l'apprenant peut **comprendre les racines du débat, les termes techniques, les expériences réelles et les lignes de clivage directement dans l'interface, sans avoir besoin d'aller lire des articles académiques de 40 pages**.
 
 ---
 
-## 🔬 Corpus Initial Inclus
+## 🧭 Architecture Didactique d'une Fiche de Controverse
 
-L'application est préconfigurée avec 5 controverses majeures couvrant différents domaines de la connaissance :
+Chaque sujet est structuré autour de 6 modules complémentaires :
+
+1. **Vue d'ensemble & Lexique Fondamental :**
+   - Définition approfondie de la fracture épistémique et de ses enjeux contemporains.
+   - **Garde-fou méthodologique & Anti-Faux Équilibre (*No False Balance*) :** Exclusion catégorique des pseudosciences et des négationnismes.
+   - **Lexique des Notions Clés :** Définition claire des concepts centraux et explicitation de *« Pourquoi cette notion est capitale pour comprendre le débat »*.
+2. **Accords & Divergences :**
+   - **Le Socle Commun :** Les points de consensus scientifique non négociables partagés par l'ensemble de la communauté (ce qui évite les faux débats).
+   - **Matrice Comparative des Lignes de Fracture :** Confrontation point par point sur les axes névralgiques (substrat, timing didactique, réfutabilité, architecture), assortie d'une analyse didactique du désaccord.
+   - **Fiches comparatives des Thèses avec Niveaux de Preuve HAS :** Arguments forts, objections techniques formulées contre le camp adverse, auteurs repères et évaluation méthodologique formelle.
+3. **Épreuves Empiriques & Expériences Scientifiques Réelles :**
+   - Protocoles de recherche princeps (collaborations contradictoires, essais contrôlés randomisés, données astrophysiques ou anthropologiques), résultats observés et impact sur la controverse.
+4. **Questions / Réponses (FAQ Didactique) :**
+   - Réponses directes aux idées reçues, fausses évidences et dilemmes éthiques ou politiques.
+5. **Corpus Graduel & Évaluation HAS :**
+   - 4 paliers d'exigence épistémique (*Facile*, *Moyen*, *Difficile*, *Expert*) avec liens directs et double évaluation : niveau de difficulté de lecture + **Grade méthodologique HAS** (*Grade A*, *Grade B*, *Grade C*, *Grade D*).
+6. **Atelier de Décentration Cognitive (*Steelman* & Johnson & Johnson) :**
+   - Module interactif invitant l'utilisateur à déclarer son intuition spontanée puis à formaliser par écrit avec charité épistémique le meilleur argument de la position opposée.
+
+---
+
+## 🔬 Grille d'Évaluation des Niveaux de Preuve (Standard HAS)
+
+L'application intègre une modale et un système de badges inspirés de la Haute Autorité de Santé et de l'Evidence-Based Science :
+
+| Grade HAS | Niveau de Preuve | Définition Méthodologique |
+| :--- | :--- | :--- |
+| **Grade A** | **Niveau 1** (Preuve établie) | Méta-analyses exhaustives d'essais contrôlés randomisés (ECR) de forte puissance, revues systématiques, études longitudinales massives répliquées. |
+| **Grade B** | **Niveau 2** (Présomption scientifique) | Essais comparatifs randomisés sur échantillons restreints, cohortes prospectives bien menées, quasi-expériences contrôlées en milieu naturel, mesures biomédicales directes. |
+| **Grade C** | **Niveau 3** (Faible niveau de preuve) | Études corrélationnelles observationnelles, études cas-témoins, données de laboratoire sur échantillons spécifiques (ex. WEIRD). |
+| **Grade D** | **Niveau 4** (Modèle théorique / Accord d'experts) | Formalisations mathématiques déductives sans confirmation empirique directe (ex. échelle de Planck), séries de cas, consensus informel d'experts, essais réflexifs. |
+
+---
+
+## 📚 Les 5 Controverses Majeures Incluses
 
 1. **Neurosciences & IA :** *Théories de la conscience & Architecture des LLM* (Fonctionnalisme computationnel & GNWT vs Biologisme strict & IIT).
 2. **Sciences de l'Éducation :** *Enseignement explicite vs Pédagogies par découverte guidée* (Direct Instruction / Théorie de la charge cognitive vs Échec productif / Socio-constructivisme).
@@ -40,33 +59,18 @@ L'application est préconfigurée avec 5 controverses majeures couvrant différe
 
 ## 🚀 Utilisation & Déploiement
 
-### Exécution Locale Immédiate
-Aucun serveur ni installation Node.js n'est nécessaire :
-1. Téléchargez ou clonez ce dépôt.
-2. Double-cliquez sur `index.html` pour l'ouvrir dans n'importe quel navigateur moderne (Chrome, Firefox, Safari, Edge).
-
-### Fonctionnalités Clés
-- **Recherche & Filtrage :** Filtrage instantané par domaine et recherche plein texte (titres, définitions, auteurs repères).
-- **Liens Documentaires Directs :** Accès direct vers les articles fondateurs (arXiv, DOI, Revues) ou requêtes ciblées sur Google Scholar.
-- **Import / Export JSON :** Exportez vos données en un clic ou importez de nouveaux corpus personnalisés.
-- **Persistance Navigateur :** Vos notes de décentration et corpus importés sont conservés automatiquement dans le `localStorage`.
-
-### Déploiement sur GitHub Pages
-Le dépôt inclut une configuration prête pour GitHub Pages :
-1. Rendez-vous dans les **Settings** de votre dépôt GitHub > **Pages**.
-2. Dans **Branch**, sélectionnez `main` et dossier `/ (root)`, puis validez.
-3. L'application sera immédiatement accessible en ligne publiquement.
+- **En ligne (GitHub Pages) :** [https://0doacre.github.io/episteme/](https://0doacre.github.io/episteme/)
+- **Exécution Locale Immédiate :** Ouvrez simplement `index.html` dans votre navigateur (Chrome, Firefox, Safari, Edge). Aucun serveur, runtime ou installation n'est nécessaire.
 
 ---
 
-## 🤖 Alimentation par Agents IA
+## 🤖 Guide pour Agents IA
 
-Vous pouvez étendre le corpus à l'infini en demandant à un modèle d'IA (Gemini, Claude, GPT-4) d'analyser un sujet selon notre schéma strict.
-
-👉 Consultez le guide dédié : **[README_AGENT_IA.md](README_AGENT_IA.md)** pour le prompt d'amorce et le schéma JSON normé.
+Pour générer automatiquement de nouvelles controverses avec cette même densité conceptuelle et les niveaux de preuve HAS :
+👉 **Consultez le [README_AGENT_IA.md](README_AGENT_IA.md)**
 
 ---
 
 ## 📄 Licence
 
-Ce projet est sous licence MIT — libre d'utilisation, de modification et de distribution.
+Projet libre sous licence MIT.

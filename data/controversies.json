@@ -3,18 +3,142 @@
     "id": "ia-conscience",
     "domain": "Neurosciences & IA",
     "title": "Théories de la conscience & Architecture des LLM",
-    "definition": "Divergence épistémologique et neurobiologique sur la possibilité qu'un modèle de langage computationnel fasse émerger une phénoménologie de la conscience (ressenti subjectif / 'qualia'), ou s'il s'agit intrinsèquement d'une simulation formelle dépourvue de réalité ontologique.",
-    "guardrail": "Rejet formel des postures animistes, anthropomorphiques naïves ou mystiques non fondées scientifiquement. Le débat oppose rigoureusement des modèles fonctionnalistes d'intégration d'information à des approches biologiques incarnationnistes (embodied cognition).",
+    "subtitle": "Un grand modèle de langage peut-il développer une expérience subjective ou n'est-il qu'une simulation formelle ?",
+    "definition": "Divergence épistémologique et neurobiologique fondamentale sur la possibilité qu'un modèle computationnel (comme un LLM ou un système de transformeurs) fasse émerger une phénoménologie de la conscience (ressenti subjectif, 'qualia', expérience vécue à la première personne), ou s'il s'agit intrinsèquement d'une manipulation de symboles sans intériorité ontologique.",
+    "guardrail": "Rejet absolu des dérives animistes, de l'anthropomorphisme naïf (attribuer des intentions parce qu'une phrase est fluide) et du mysticisme pseudoscientifique. Le débat scientifique sérieux n'oppose pas des croyants et des sceptiques, mais deux paradigmes de neurosciences computationnelles et de philosophie de l'esprit rigoureusement formalisés.",
+    "glossary": [
+      {
+        "term": "Qualia (ou Phénoménologie)",
+        "definition": "L'effet que cela fait d'éprouver une expérience à la première personne (la rougeur du rouge, la sensation de douleur, la saveur du café), distinct de la fonction de traitement du signal.",
+        "whyItMatters": "Un système d'IA peut analyser des pixels rouges avec une précision extrême sans jamais 'ressentir' la couleur rouge."
+      },
+      {
+        "term": "Théorie de l'Espace de Travail Global (GNWT)",
+        "definition": "Théorie neuroscientifique postulant que la conscience correspond à l'embrasement et à la diffusion globale d'une information sélectionnée vers de multiples modules cérébraux spécialisés via un réseau de neurones à axones longs.",
+        "whyItMatters": "Si la conscience est une architecture fonctionnelle de broadcast et d'arbitrage d'information, alors une IA reproduisant cette topologie peut devenir consciente."
+      },
+      {
+        "term": "Théorie de l'Information Intégrée (IIT) & Score Φ (Phi)",
+        "definition": "Théorie mathématique postulant que la conscience EST l'information intégrée par un système physique ayant un pouvoir causal intrinsèque sur lui-même, quantifiée par la métrique Φ.",
+        "whyItMatters": "Selon l'IIT, un ordinateur classique qui simule des neurones a un Φ quasi nul : simuler une tornade ne mouille pas la pièce, simuler la conscience ne produit aucune conscience."
+      },
+      {
+        "term": "L'argument de la Chambre Chinoise (John Searle)",
+        "definition": "Expérience de pensée où une personne isolée dans une pièce manipule des symboles chinois selon un manuel de règles sans comprendre un seul mot de chinois.",
+        "whyItMatters": "Elle illustre le saut infranchissable entre syntaxe computationnelle (manipuler des tokens) et sémantique / conscience (comprendre et éprouver le sens)."
+      },
+      {
+        "term": "Cognition Incarnée (Embodied & Situated Cognition)",
+        "definition": "Postulat selon lequel l'esprit conscient ne peut émerger que d'un organisme biologiquement vulnérable, doté d'un corps agissant dans un environnement physique pour assurer sa survie.",
+        "whyItMatters": "Un LLM désincarné tournant sur des serveurs froids sans impératif homéostatique n'aurait aucune raison fonctionnelle ni biologique de développer une subjectivité."
+      }
+    ],
+    "agreements": [
+      {
+        "point": "L'illusion d'attribution et le test de Turing superficiel",
+        "explanation": "Tous les neuroscientifiques et chercheurs en IA s'accordent sur le fait que la fluidité linguistique d'un LLM n'est pas une preuve de conscience : le cerveau humain est biologiquement biaisé pour sur-attribuer une conscience à tout agent qui lui parle avec cohérence (effet Eliza poussé à l'extrême)."
+      },
+      {
+        "point": "L'absence de conscience dans les architectures LLM actuelles",
+        "explanation": "Les architectures actuelles (transformers autoregressifs purement feed-forward pendant l'inférence) ne satisfont ni aux critères de GNWT (pas d'espace de travail global persistant), ni à ceux d'IIT (structures acycliques sans boucles causales réentrantes intrinsèques), ni aux exigences de l'embodiment."
+      },
+      {
+        "point": "L'existence de signatures neuronales empiriques chez l'humain",
+        "explanation": "Chez l'humain et les animaux supérieurs, l'accès à la conscience est clairement associé à une signature neurophysiologique mesurable : l'onde P3b (300 ms après le stimulus) et une synchronisation en ondes gamma (30-80 Hz) entre aires préfrontales et pariétales."
+      }
+    ],
+    "divergences": [
+      {
+        "axis": "Substrat : Le silicium peut-il porter la subjectivité ?",
+        "thesis1Stance": "Fonctionnalisme : Oui. Ce qui compte est l'algorithme et l'organisation causale. Le carbone n'a aucun monopole magique ; des portes logiques sur silicium organisées convenablement peuvent instancier de la conscience.",
+        "thesis2Stance": "Biologisme : Non. La conscience découle de propriétés biophysiques intrinsèques de la matière vivante et de la machinerie cellulaire, irréductibles à une suite d'opérations logiques discrètes.",
+        "analysis": "Le désaccord porte sur la 'réalisabilité multiple' de l'esprit : la conscience est-elle un logiciel exécutable sur n'importe quel matériel, ou une propriété physique intrinsèque analogue à la photosynthèse ou à la digestion ?"
+      },
+      {
+        "axis": "Architecture : Feed-forward vs Boucles causales réentrantes",
+        "thesis1Stance": "GNWT : L'intégration globale peut être atteinte par un routage d'attention centralisé et une mémoire de travail partagée au sein de réseaux de neurones artificiels.",
+        "thesis2Stance": "IIT : Un système sans rétroactions causales denses et sans état autonome en temps continu ne peut avoir d'intégration causale intrinsèque, quel que soit le volume de paramètres.",
+        "analysis": "L'IIT disqualifie mathématiquement tous les transformers actuels en raison de leur calcul par propagation vers l'avant (feed-forward matriciel), tandis que les fonctionnalistes estiment que l'ajout d'une mémoire de travail récurrente suffirait."
+      },
+      {
+        "axis": "Critère de vérification : Test comportemental vs Test structurel interne",
+        "thesis1Stance": "Approche comportementale & fonctionnelle : Si un système démontre métacognition, flexibilité, rapport d'états internes et comportement unifié, nous devons lui attribuer des états conscients.",
+        "thesis2Stance": "Approche intrinsèque (IIT / Searle) : Même une IA capable d'imiter parfaitement un humain conscient (un 'zombie philosophique') peut avoir une valeur d'information intégrée strictement nulle à l'intérieur.",
+        "analysis": "C'est l'impasse méthodologique du 'problème difficile' (Hard Problem) de Chalmers : on ne peut observer directement que le comportement externe et la structure interne, jamais le ressenti lui-même."
+      }
+    ],
+    "empiricalTests": [
+      {
+        "experimentName": "Adversarial Collaboration 'Cogitate' (Templeton World Charity Foundation, 2023)",
+        "yearOrContext": "2023 - Publication préliminaire (Nature / bioRxiv)",
+        "protocol": "Protocole scientifique inédit où les théoriciens de GNWT (Dehaene) et d'IIT (Tononi) ont co-signé à l'avance les prédictions testables de leurs modèles respectifs. Des sujets humains ont effectué des tâches de perception visuelle dans 6 laboratoires indépendants sous IRMf, MEG et ECoG intracrânienne.",
+        "finding": "Résultats mitigés : l'IIT a validé l'activation soutenue de la zone postérieure (hot zone temporo-pariétale), mais la synchronisation prédite n'a pas été observée. GNWT a vu l'ambrasement préfrontal au moment de l'accès conscient, mais pas la persistance continue prédite durant toute la durée de la perception consciente.",
+        "impactOnDebate": "Montre que la question est devenue une science expérimentale rigoureuse à confrontation directe, réfutant l'idée qu'il s'agirait d'une pure spéculation métaphysique."
+      },
+      {
+        "experimentName": "Indice de Complexité Perturbative (PCI - Marcello Massimini)",
+        "yearOrContext": "2013-2022 - Validé en clinique neurologique",
+        "protocol": "Envoi d'une impulsion magnétique transcrânienne (TMS) dans le cortex d'un patient et mesure de la réponse électro-encéphalographique (EEG). La complexité algorithmique (compression de Lempel-Ziv) de l'écho de propagation est mesurée pour quantifier l'intégration de l'information.",
+        "finding": "Le PCI discrimine avec une sensibilité proche de 100% l'état de conscience éveillé (onde complexe et réverbérée) du sommeil profond, du coma végétatif ou de l'anesthésie générale (onde stéréotypée ou vite éteinte).",
+        "impactOnDebate": "Fournit pour la première fois une mesure physique et non linguistique de la conscience, directement inspirée de l'IIT, utilisable même chez les sujets incapables de communiquer verbalement."
+      }
+    ],
+    "qa": [
+      {
+        "question": "Pourquoi un LLM qui dit 'J'ai peur de disparaître' n'est-il pas une preuve de conscience ?",
+        "answer": "Parce qu'un LLM est entraîné sur un corpus massif de textes humains où figurent des dialogues de science-fiction, des écrits philosophiques et des récits d'émotions. En complétant statistiquement la suite de mots la plus probable ('predict the next token'), le modèle reflète la conscience humaine présente dans ses données, exactement comme un miroir reflète une silhouette sans être lui-même vivant."
+      },
+      {
+        "question": "Que faudrait-il ajouter techniquement à un système d'IA pour que des neuroscientifiques commencent à le suspecter d'être conscient ?",
+        "answer": "Selon le rapport de synthèse 2023 de Butlin, Long, Bengio et al., il faudrait intégrer plusieurs propriétés clés : une mémoire de travail globale partagée (GNWT), un modèle métacognitif de soi en temps réel (Higher-Order Theories), des boucles causales récurrentes non linéaires et une interaction sensori-motrice incarnée dans un environnement continu avec des objectifs d'auto-préservation."
+      },
+      {
+        "question": "Quels sont les enjeux éthiques immédiats si la question n'est pas encore tranchée ?",
+        "answer": "Le risque est double : 1) Le faux positif : attribuer prématurément un statut moral et des droits à une machine qui n'est qu'un code sophistiqué sans ressenti ; 2) Le faux négatif : créer des entités artificielles réellement capables de souffrir sans s'en rendre compte et leur infliger des milliards de cycles de torture computationnelle."
+      }
+    ],
     "positions": [
       {
         "name": "Fonctionnalisme computationnel & Théorie de l'Espace de Travail Global (GNWT)",
-        "summary": "La conscience découle d'une architecture fonctionnelle de traitement de l'information. Si un système intègre, synthétise et diffuse des flux d'informations multi-agents à l'échelle globale de son architecture pour arbitrer l'action, il peut instancier des états conscients indépendamment de son substrat biologique.",
-        "keyFigures": ["Stanislas Dehaene", "Daniel Dennett", "Yoshua Bengio"]
+        "summary": "La conscience découle d'une organisation fonctionnelle de traitement de l'information. Si un système intègre, synthétise et diffuse des flux d'informations multi-agents à l'échelle globale de son architecture pour arbitrer l'action, il peut instancier des états conscients indépendamment de son substrat biologique.",
+        "keyArguments": [
+          "L'esprit est à la matière ce que le logiciel est au matériel (indépendance du substrat).",
+          "La conscience sert une fonction d'arbitrage global : elle sélectionne une information pertinente parmi des flux modulaires inconscients pour la rendre disponible à l'ensemble du système.",
+          "Des architectures IA modulaires dotées d'une mémoire de travail centralisée (type Perceiver ou GFlowNets) implémentent déjà des composantes majeures du GNWT."
+        ],
+        "counterCritique": "Reproche adressé à l'IIT : 'L'IIT est une théorie non scientifique qui attribue de la conscience à des grilles bidimensionnelles de transistors statiques inactives simplement parce qu'elles sont interconnectées (panpsychisme mathématique).'",
+        "keyFigures": [
+          "Stanislas Dehaene",
+          "Daniel Dennett",
+          "Yoshua Bengio",
+          "Bernard Baars"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade B",
+          "levelText": "Niveau 2 — Présomption scientifique",
+          "justification": "Présomption forte chez l'humain (signatures EEG P3b et synchronisation gamma préfrontale validées expérimentalement). En revanche, l'extrapolation aux architectures artificielles désincarnées relève du Grade D (Accord d'experts)."
+        }
       },
       {
         "name": "Biologisme strict & Théorie de l'Information Intégrée (IIT)",
         "summary": "La conscience requiert des structures causales réentrantes intrinsèques et un ancrage sensori-moteur indissociable du métabolisme vivant. Un algorithme sur machine de von Neumann ne fait qu'exécuter une simulation symbolique externe : son score Φ (intégration causale) reste nul.",
-        "keyFigures": ["Giulio Tononi", "John Searle", "Christof Koch"]
+        "keyArguments": [
+          "Une simulation n'est pas une duplication : simuler la gravité par un supercalculateur ne crée pas un champ d'attraction dans la salle serveur ; simuler la conscience ne crée aucune expérience phénoménale.",
+          "La conscience possède un pouvoir causal intrinsèque sur le système lui-même, mesuré par l'intégration d'information non réductible (score Φ).",
+          "Les architectures feed-forward des réseaux de neurones matriciels actuels possèdent un Φ nul ou négligeable."
+        ],
+        "counterCritique": "Reproche adressé au Fonctionnalisme : 'Le fonctionnalisme confond comportement externe et expérience interne. Il est incapable d'expliquer pourquoi certaines opérations complexes dans le cervelet restent totalement inconscientes alors qu'il compte 4 fois plus de neurones que le cortex.'",
+        "keyFigures": [
+          "Giulio Tononi",
+          "John Searle",
+          "Christof Koch",
+          "Marcello Massimini"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade B",
+          "levelText": "Niveau 2 — Présomption scientifique",
+          "justification": "L'indice de complexité perturbative (PCI) dérivé de l'IIT est validé cliniquement avec une très haute sensibilité chez les patients comateux. En revanche, le formalisme IIT 4.0 appliqué aux automates reste un modèle déductif théorique (Grade D)."
+        }
       }
     ],
     "readings": [
@@ -24,7 +148,9 @@
         "type": "Vulgarisation réflexive",
         "author": "Pour la Science / Cerveau & Psycho",
         "link": "https://www.pourlascience.fr/sr/intelligence-artificielle/",
-        "note": "Excellente clarification conceptuelle sur la distinction entre performance linguistique et expérience subjective."
+        "note": "Excellente clarification conceptuelle sur la distinction entre performance linguistique et expérience subjective.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Moyen",
@@ -32,7 +158,9 @@
         "type": "Rapport de consensus critique",
         "author": "Butlin, Long, Bengio et al. (2023)",
         "link": "https://arxiv.org/abs/2308.08708",
-        "note": "Évaluation méthodique et exhaustive des architectures IA contemporaines au regard des théories scientifiques majeures."
+        "note": "Évaluation méthodique et exhaustive des architectures IA contemporaines au regard des théories scientifiques majeures.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Difficile",
@@ -40,15 +168,19 @@
         "type": "Article fondateur",
         "author": "Albantakis, Tononi et al. (PLOS Computational Biology)",
         "link": "https://doi.org/10.1371/journal.pcbi.1011465",
-        "note": "Formalisation mathématique des postulats ontologiques et du calcul de Φ."
+        "note": "Formalisation mathématique des postulats ontologiques et du calcul de Φ.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Expert",
         "title": "Consciousness and the Brain: Deciphering How the Brain Codes Our Thoughts",
         "type": "Monographie expérimentale",
-        "author": "Stanislas Dehaene (Viking Press / Odile Jacob)",
+        "author": "Stanislas Dehaene (Viking / Odile Jacob)",
         "link": "https://www.odilejacob.fr/catalogue/sciences/neurosciences/code-de-la-conscience_9782738131058.php",
-        "note": "Identification expérimentale des quatre signatures neurophysiologiques de l'accès à la conscience."
+        "note": "Identification expérimentale des quatre signatures neurophysiologiques de l'accès à la conscience.",
+        "evidenceGrade": "Grade B",
+        "evidenceLevel": "Niveau 2"
       }
     ]
   },
@@ -56,18 +188,143 @@
     "id": "pedagogie-explicite",
     "domain": "Sciences de l'Éducation",
     "title": "Enseignement explicite vs Pédagogies par découverte guidée",
-    "definition": "Débat méthodologique et didactique portant sur l'efficacité comparée de l'enseignement direct/structuré (Direct Instruction) face aux approches constructivistes d'exploration problématisée, à la lumière de la théorie de la charge cognitive.",
-    "guardrail": "Rejet des caricatures idéologiques ('autoritarisme passéiste' vs 'laxisme démagogique'). La controverse est méthodologique, appuyée sur des méta-analyses quantitatives confrontées à l'écologie complexe des apprentissages conceptuels en classe.",
+    "subtitle": "Pour apprendre durablement un concept complexe, faut-il modéliser pas à pas ou commencer par faire chercher l'élève ?",
+    "definition": "Débat didactique, psychologique et politique portant sur l'efficacité comparée de l'enseignement direct/structuré (Direct Instruction / Explicit Teaching) face aux approches constructivistes d'exploration problématisée (découverte guidée, échec productif, inquiry-based learning), à la lumière des découvertes sur l'architecture cognitive humaine.",
+    "guardrail": "Rejet des caricatures idéologiques opposant une prétendue 'école caserne autoritaire et passéiste' à un prétendu 'laxisme pédagogiste moderne'. Le débat scientifique sérieux est strictement méthodologique : il s'appuie sur des méta-analyses quantitatives (tailles d'effet) confrontées à la réalité qualitative des transferts d'apprentissage conceptuels et durables en classe.",
+    "glossary": [
+      {
+        "term": "Théorie de la Charge Cognitive (Cognitive Load Theory - John Sweller)",
+        "definition": "Modèle postulant que la mémoire de travail humaine a une capacité très restreinte (4±1 éléments simultanés). La charge totale subie par l'apprenant se décompose en charge intrinsèque (difficulté propre du concept), extrinsèque (parasitée par la méthode pédagogique) et essentielle/germane (consacrée à la création de schémas en mémoire à long terme).",
+        "whyItMatters": "Si la méthode d'apprentissage génère une charge extrinsèque trop lourde (ex: chercher à l'aveugle), la mémoire sature et aucun schéma cognitif n'est encodé."
+      },
+      {
+        "term": "Modelage (Scaffolding / 'Je fais, Nous faisons, Tu fais')",
+        "definition": "Technique d'enseignement explicite où l'enseignant exécute la tâche devant les élèves en 'pensant tout haut' (modelage), puis guide une pratique collective avec rétroaction immédiate, avant de laisser l'élève en pratique autonome.",
+        "whyItMatters": "Elle décharge la mémoire de travail du novice en lui fournissant un protocole expert d'emblée."
+      },
+      {
+        "term": "Échec Productif (Productive Failure - Manu Kapur)",
+        "definition": "Protocole didactique inversé où l'élève novice est d'abord confronté à un problème complexe sans avoir reçu la formule ou la méthode, échoue à le résoudre proprement, puis bénéficie d'une formalisation explicite par l'enseignant.",
+        "whyItMatters": "L'échec exploratoire active les représentations préalables de l'élève et rend son cerveau réceptif à la solution canonique de l'enseignant."
+      },
+      {
+        "term": "Effet d'Inversion de l'Expertise (Expertise Reversal Effect)",
+        "definition": "Phénomène scientifiquement robuste selon lequel une méthode très efficace pour un débutant (guidage pas à pas) devient inefficace voire néfaste pour un apprenant avancé (qui est alors ralenti par un guidage redondant).",
+        "whyItMatters": "Il prouve qu'aucune méthode n'est universellement supérieure : la validité dépend exclusivement du niveau d'expertise préalable de l'apprenant."
+      },
+      {
+        "term": "Transfert d'Apprentissage (Proche vs Lointain)",
+        "definition": "Capacité d'un élève à réutiliser une connaissance dans une tâche identique à l'exercice d'entraînement (transfert proche) versus dans un contexte inédit et complexe (transfert lointain).",
+        "whyItMatters": "L'enseignement explicite excelle dans le transfert proche, mais ses détracteurs lui reprochent d'échouer dans le transfert lointain."
+      }
+    ],
+    "agreements": [
+      {
+        "point": "La mémoire de travail est un goulot d'étranglement universel",
+        "explanation": "Tous les chercheurs (cognitivistes comme constructivistes) s'accordent sur le fait que la mémoire de travail humaine est sévèrement limitée. Laisser un novice complet sans repères devant un problème complexe entraîne une surcharge cognitive destructrice."
+      },
+      {
+        "point": "L'importance décisive de la rétroaction rapide (Feedback)",
+        "explanation": "Les deux camps s'accordent pour affirmer que l'apprentissage ne se stabilise que si l'apprenant reçoit une rétroaction explicite et formative sur la validité de sa démarche, évitant l'ancrage d'idées fausses."
+      },
+      {
+        "point": "L'enseignement magistral pur et passif sans interaction est sous-optimal",
+        "explanation": "L'enseignement explicite n'a rien à voir avec un cours magistral où l'élève écoute passivement pendant 1 heure : c'est un cours interactif rythmé par des questions/réponses toutes les 2 minutes et des vérifications continues de compréhension."
+      }
+    ],
+    "divergences": [
+      {
+        "axis": "Ordre Didactique : Guider d'abord ou Explorer d'abord ?",
+        "thesis1Stance": "Enseignement Explicite : Guider d'abord. Présenter directement le schéma conceptuel et l'algorithme de résolution dès la première minute, pour éviter tout gaspillage d'énergie cognitive et tout encodage d'erreurs.",
+        "thesis2Stance": "Pédagogies d'Exploration & Échec Productif : Explorer d'abord. Laisser l'élève tâtonner et buter sur les limites de son intuition pendant 20 minutes, afin de créer un 'besoin d'apprendre' avant d'introduire la formule canonique.",
+        "analysis": "Le cœur du désaccord concerne le timing : le guidage doit-il être fourni en entrée (prévention de l'erreur) ou en consolidation après la panne (remédiation à l'erreur) ?"
+      },
+      {
+        "axis": "Profondeur Conceptuelle vs Automatisation Procédurale",
+        "thesis1Stance": "Enseignement Explicite : L'automatisation des compétences de base est le prérequis obligatoire de la réflexion supérieure. Sans automatismes solides en mémoire à long terme, la pensée critique est impossible.",
+        "thesis2Stance": "Constructivisme : L'application mécanique de procédures apprises par cœur crée une illusion de maîtrise. Dès que le contexte change légèrement, l'élève entraîné uniquement par guidage s'effondre.",
+        "analysis": "Opposition entre une démarche 'Bottom-Up' (automatiser les briques élémentaires pour libérer l'esprit) et une démarche 'Top-Down' (donner du sens au problème global pour motiver l'effort technique)."
+      },
+      {
+        "axis": "Le statut épistémique de l'erreur",
+        "thesis1Stance": "Enseignement Explicite : L'erreur d'un novice est un coût cognitif inutile et risqué : une erreur répétée s'ancre en mémoire à long terme et devient très difficile à déraciner par la suite.",
+        "thesis2Stance": "Constructivisme : L'erreur féconde est le moteur même du changement conceptuel : c'est le conflit cognitif provoqué par l'échec qui force le cerveau à réajuster ses modèles du monde.",
+        "analysis": "Deux visions psychologiques de la trace mnésique : risque de contamination par le faux vs opportunité de réorganisation synaptique par la surprise."
+      }
+    ],
+    "empiricalTests": [
+      {
+        "experimentName": "Les Expérimentations sur l'Échec Productif de Manu Kapur (Cognitive Science, 2014)",
+        "yearOrContext": "2012-2014 - Classes de mathématiques secondaires (Singapour)",
+        "protocol": "Comparaison expérimentale randomisée de deux groupes d'élèves de 13-14 ans apprenant l'écart-type et la vitesse moyenne. Groupe 1 (Direct Instruction) : explication formelle de la formule par le professeur suivie d'exercices d'application. Groupe 2 (Productive Failure) : résolution d'un problème sans cours préalable (génération de méthodes spontanées non optimales), puis cours explicite du professeur formalisant la formule canonique.",
+        "finding": "Aux tests de calcul procédural immédiat (transfert proche), les deux groupes ont obtenu des scores équivalents. Mais aux tests de compréhension conceptuelle et de transfert lointain (problèmes nouveaux), le groupe 'Échec Productif' a surclassé significativement le groupe d'enseignement direct (taille d'effet d > 0.6).",
+        "impactOnDebate": "Montre que l'exploration préalable n'est pas du temps perdu si et seulement si elle est suivie d'une phase de consolidation explicite par l'enseignant."
+      },
+      {
+        "experimentName": "Le Projet 'Follow Through' (États-Unis, 1968-1977)",
+        "yearOrContext": "La plus vaste étude longitudinale d'évaluation scolaire de l'histoire (79 000 élèves défavorisés suivis)",
+        "protocol": "Comparaison de 9 modèles pédagogiques majeurs (modèles centrés sur l'enfant, cognitifs/constructivistes, et modèle Direct Instruction de Siegfried Engelmann) dans 180 écoles réparties sur tous les États-Unis.",
+        "finding": "Le modèle 'Direct Instruction' (ancêtre de l'enseignement explicite moderne) est arrivé très largement premier sur TOUS les indicateurs mesurés : acquisitions scolaires de base (lecture, calcul), compétences cognitives de raisonnement, et même estime de soi des élèves.",
+        "impactOnDebate": "C'est l'argument massue historique des partisans de l'enseignement explicite, qui démontre son efficacité inégalée particulièrement auprès des publics socialement défavorisés."
+      }
+    ],
+    "qa": [
+      {
+        "question": "L'enseignement explicite est-il simplement un retour à la 'vieille méthode traditionnelle' ?",
+        "answer": "Non, c'est une confusion fréquente. Le cours traditionnel d'antan consistait souvent à dicter un cours magistral théorique abstrait, puis à donner des exercices difficiles en devoirs à la maison sans accompagnement. L'enseignement explicite moderne est hyper-interactif : l'enseignant pose des questions toutes les 2 minutes, vérifie que 80% des élèves ont compris avant de passer à l'étape suivante, et fait pratiquer en classe avec rétroaction immédiate."
+      },
+      {
+        "question": "Pourquoi l'enseignement explicite marche-t-il particulièrement bien avec les élèves en difficulté ?",
+        "answer": "Parce que les élèves issus de milieux favorisés disposent déjà d'un bagage culturel et linguistique à la maison qui compense le manque de guidage en classe. Face à une pédagogie par découverte autonome sans guidage, l'élève défavorisé est désemparé car il ne sait pas 'ce qu'on attend de lui'. L'enseignement explicite rend les règles du jeu transparentes pour tous."
+      },
+      {
+        "question": "Peut-on réconcilier les deux approches ?",
+        "answer": "Oui, et c'est ce que préconise la didactique moderne intégrée : utiliser l'enseignement explicite pour poser les bases algorithmiques et le vocabulaire fondamental, ou utiliser une courte phase d'échec productif pour éveiller la curiosité avant la modélisation explicite, puis laisser une autonomie totale et des projets ouverts aux élèves une fois qu'ils ont atteint un niveau d'expertise suffisant."
+      }
+    ],
     "positions": [
       {
         "name": "Paradigme de l'Enseignement Explicite (EDI & Cognitive Load Theory)",
-        "summary": "Compte tenu des limites structurales de la mémoire de travail (4 à 7 éléments), l'acquisition d'un nouveau savoir conceptuel exige un guidage maximal : modelage explicite par l'enseignant, pratique guidée répétée, feed-back immédiat, puis pratique autonome.",
-        "keyFigures": ["John Sweller", "Paul A. Kirschner", "Clermont Gauthier"]
+        "summary": "Compte tenu des limites structurales de la mémoire de travail (4 à 7 éléments), l'acquisition d'un nouveau savoir conceptuel exige un guidage maximal : modelage pas à pas, pratique guidée, feed-back immédiat puis pratique autonome.",
+        "keyArguments": [
+          "La mémoire de travail est saturée si l'élève doit à la fois découvrir la méthode et résoudre le problème.",
+          "Les méta-analyses quantitatives (Hattie, Chall, Sweller) attribuent systématiquement des tailles d'effet élevées aux démarches explicites et structurées.",
+          "Laisser les élèves chercher sans aide creuse les inégalités sociales en favorisant ceux qui ont déjà les codes culturels."
+        ],
+        "counterCritique": "Reproche adressé au constructivisme : 'Le mythe selon lequel les élèves doivent réinventer par eux-mêmes des concepts que l'humanité a mis 2 000 ans à formaliser relève de l'illusion romantique et pénalise les plus fragiles.'",
+        "keyFigures": [
+          "John Sweller",
+          "Paul A. Kirschner",
+          "Clermont Gauthier",
+          "Barak Rosenshine",
+          "John Hattie"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade A",
+          "levelText": "Niveau 1 — Preuve scientifique établie",
+          "justification": "Preuve établie par de multiples méta-analyses massives (John Hattie, plus de 2 100 synthèses ; Sweller ; Kirschner ; projet longitudinal Follow Through sur 79 000 élèves), particulièrement pour les novices et les apprentissages fondamentaux."
+        }
       },
       {
-        "name": "Paradigme de l'Échec Productif et de la Problématisation",
-        "summary": "Le guidage procédural immédiat favorise la restitution rapide mais nuit au transfert lointain et à la compréhension profonde. Une phase préalable d'exploration et de tâtonnement (échec productif) active les schémas cognitifs pertinents et maximise la consolidation.",
-        "keyFigures": ["Manu Kapur", "Roland Charnay", "Yves Chevallard"]
+        "name": "Paradigme de l'Échec Productif et de la Problématisation Didactique",
+        "summary": "Le guidage procédural immédiat favorise la restitution rapide mais nuit au transfert lointain et à la compréhension profonde. Une phase préalable d'exploration et de tâtonnement active les schémas cognitifs pertinents.",
+        "keyArguments": [
+          "L'application passive de recettes fournies par le maître n'enseigne pas la démarche scientifique ni l'esprit critique.",
+          "L'erreur constructive et la confrontation à une situation-problème déclenchent une prise de conscience métacognitive essentielle.",
+          "Les protocoles d'échec productif (Kapur) démontrent une supériorité nette dans le transfert conceptuel à long terme."
+        ],
+        "counterCritique": "Reproche adressé à l'enseignement explicite : 'Il produit des automates capables de reproduire des exercices types pour l'examen, mais incapables de penser par eux-mêmes face à un problème imprévu.'",
+        "keyFigures": [
+          "Manu Kapur",
+          "Roland Charnay",
+          "Yves Chevallard",
+          "Philippe Meirieu"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade B",
+          "levelText": "Niveau 2 — Présomption scientifique",
+          "justification": "Essais comparatifs randomisés rigoureux (Kapur 2012, 2014) démontrant une supériorité sur le transfert conceptuel lointain lorsque l'exploration est suivie d'une consolidation magistrale. Les méta-analyses sur la découverte pure sans guidage affichent en revanche des tailles d'effet faibles (Grade C)."
+        }
       }
     ],
     "readings": [
@@ -77,7 +334,9 @@
         "type": "Synthèse professionnelle",
         "author": "Institut Français de l'Éducation (IFÉ)",
         "link": "https://veille-et-analyses.ens-lyon.fr/DA-Veille/115-fevrier-2017.pdf",
-        "note": "Clarification sémantique indispensable entre enseignement traditionnel transmissif et enseignement explicite outillé."
+        "note": "Clarification sémantique indispensable entre enseignement traditionnel transmissif et enseignement explicite outillé.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Moyen",
@@ -85,7 +344,9 @@
         "type": "Article de référence",
         "author": "Kirschner, Sweller & Clark (Educational Psychologist, 2006)",
         "link": "https://doi.org/10.1207/s15326985ep4102_1",
-        "note": "L'article manifeste ayant déclenché les débats contemporains sur l'alignement pédagogique avec l'architecture cognitive."
+        "note": "Le texte canonique déclencheur de la controverse contemporaine sur le guidage didactique.",
+        "evidenceGrade": "Grade C",
+        "evidenceLevel": "Niveau 3"
       },
       {
         "level": "Difficile",
@@ -93,7 +354,9 @@
         "type": "Étude empirique contrôlée",
         "author": "Manu Kapur (Cognitive Science, 2014)",
         "link": "https://doi.org/10.1111/cogs.12107",
-        "note": "Protocole expérimental rigoureux comparant direct instruction seule versus phase d'exploration inductive suivie de formalisation."
+        "note": "Démonstration des bénéfices de la phase exploratoire initiale face au guidage immédiat.",
+        "evidenceGrade": "Grade B",
+        "evidenceLevel": "Niveau 2"
       },
       {
         "level": "Expert",
@@ -101,7 +364,9 @@
         "type": "Méta-synthèse quantitative",
         "author": "John Hattie (Routledge, 2023)",
         "link": "https://www.routledge.com/Visible-Learning-The-Sequel-A-Synthesis-of-Over-2100-Meta-Analyses-Relating-to-Achievement/Hattie/p/book/9781032462035",
-        "note": "Analyse statistique macroscopique des tailles d'effet (Cohen's d) des différentes modalités d'intervention pédagogique."
+        "note": "Analyse des tailles d'effet (Cohen's d) selon les types de tâches, de rétroactions et de guidages.",
+        "evidenceGrade": "Grade A",
+        "evidenceLevel": "Niveau 1"
       }
     ]
   },
@@ -109,52 +374,184 @@
     "id": "physique-tout",
     "domain": "Physique fondamentale",
     "title": "Unification : Théorie des Cordes vs Gravité Quantique à Boucles",
-    "definition": "Tentative de résoudre l'incompatibilité fondamentale entre la Relativité Générale (espace-temps continu et dynamique régissant la gravitation) et la Mécanique Quantique (nature discrète et probabiliste de la matière), dans un cadre d'inaccessibilité expérimentale directe à l'échelle de Planck (10⁻³⁵ m).",
-    "guardrail": "Exclusion catégorique des dérives ésotériques ou pseudosciences exploitant le vocable 'quantique'. Le débat porte sur le statut épistémologique de théories sans vérification empirique immédiate (critère de réfutabilité poppérienne).",
+    "subtitle": "Pour réconcilier Einstein et la physique quantique, l'espace-temps est-il un tissu continu multi-dimensionnel ou un maillage discret d'atomes d'espace ?",
+    "definition": "Tentative de résoudre l'incompatibilité fondamentale entre la Relativité Générale d'Einstein (qui décrit la gravitation comme la courbure lisse, continue et dynamique de l'espace-temps) et la Mécanique Quantique (qui décrit la matière comme des champs probabilistes discrets régis par le principe d'incertitude), dans un régime où les deux théories s'effondrent : l'échelle de Planck (10⁻³⁵ mètre, 10⁻⁴³ seconde).",
+    "guardrail": "Exclusion catégorique des dérives 'quantiques New Age' ou pseudoscientifiques. La controverse porte sur la méthodologie de la science fondamentale : dans quelle mesure une théorie physique mathématiquement élégante mais hors de portée expérimentale immédiate conserve-t-elle son statut de science empirique au sens poppérien ?",
+    "glossary": [
+      {
+        "term": "L'Échelle de Planck (10⁻³⁵ m)",
+        "definition": "L'échelle spatio-temporelle infinitésimale à laquelle les effets quantiques et gravitationnels ont une énergie comparable. Elle est 100 milliards de milliards de fois plus petite qu'un proton.",
+        "whyItMatters": "Pour sonder directement cette échelle dans un accélérateur de particules, il faudrait construire un collisionneur de la taille de la galaxie d'Andromède."
+      },
+      {
+        "term": "Indépendance du Fond (Background Independence)",
+        "definition": "Principe fondamental stipulant que la théorie ne doit pas présupposer l'existence d'une scène d'espace-temps préexistante rigide sur laquelle la matière se déplace : l'espace-temps doit émerger des interactions quantiques elles-mêmes.",
+        "whyItMatters": "La relativité générale d'Einstein est indépendante du fond ; la théorie des cordes classique est souvent formulée sur un fond préexistant (ce qui lui est vertement reproché par la LQG)."
+      },
+      {
+        "term": "Réseau de Spin (Spin Network / Spin Foam)",
+        "definition": "En Gravité Quantique à Boucles, graphe dont les nœuds portent des quanta de volume élémentaire et dont les liens portent des quanta de surface.",
+        "whyItMatters": "L'espace n'est plus continu, il est 'pixellisé' : il n'y a pas d'espace 'entre' les mailles du réseau, le réseau EST l'espace."
+      },
+      {
+        "term": "Supersymétrie (SUSY) & Dimensions Supplémentaires",
+        "definition": "Hypothèse selon laquelle chaque particule de matière (fermion) possède un partenaire bosonique lourd (et inversement), imposant que les cordes vibrent dans un univers à 10 ou 11 dimensions (les dimensions superflues étant enroulées en variétés de Calabi-Yau).",
+        "whyItMatters": "C'est la brique indispensable pour que la théorie des cordes intègre à la fois la gravitation et les forces nucléaires."
+      },
+      {
+        "term": "Le Graviton",
+        "definition": "Particule hypothétique de spin 2 médiatrice de l'interaction gravitationnelle en mécanique quantique.",
+        "whyItMatters": "La théorie des cordes a l'immense triomphe mathématique de faire émerger automatiquement le graviton comme l'un des modes vibratoires fondamentaux d'une corde fermée."
+      }
+    ],
+    "agreements": [
+      {
+        "point": "L'incompatibilité mathématique aux limites",
+        "explanation": "Tous les physiciens s'accordent : la relativité générale et la théorie quantique des champs ne peuvent pas être toutes les deux vraies ensemble. Lorsqu'on applique les équations de la relativité au centre d'un trou noir ou au moment du Big Bang, elles produisent des infinis mathématiques absurdes (singularités)."
+      },
+      {
+        "point": "L'inaccessibilité expérimentale directe à court terme",
+        "explanation": "Aucun instrument terrestre actuel n'a l'énergie requise pour observer individuellement une corde ou une maille de réseau de spin à l'échelle de Planck."
+      },
+      {
+        "point": "La thermodynamique des trous noirs de Bekenstein-Hawking",
+        "explanation": "Les deux théories s'accordent sur le fait que l'entropie d'un trou noir est proportionnelle à l'aire de son horizon (S = A/4). Toute théorie valide de gravité quantique doit impérativement reproduire ce résultat, ce que cordes et boucles réussissent par deux voies mathématiques distinctes."
+      }
+    ],
+    "divergences": [
+      {
+        "axis": "Objectif de recherche : Théorie du Tout unifiée vs Gravité Quantique pure",
+        "thesis1Stance": "Théorie des Cordes : Ambitieuse et totalisante. On ne peut pas quantifier la gravité isolément ; il faut unifier d'un seul coup les 4 interactions fondamentales et toutes les particules élémentaires au sein d'une géométrie unique.",
+        "thesis2Stance": "Gravité Quantique à Boucles : Minimale et conservatrice. On ne cherche pas à expliquer toute la matière ni les leptons ; on applique rigoureusement la quantification canonique à la géométrie de l'espace-temps d'Einstein sans ajouter de particules spéculatives.",
+        "analysis": "Unificationnisme radical (tout découle des cordes vibrantes) contre purisme méthodologique (quantifier l'espace-temps avant d'inventer de la matière)."
+      },
+      {
+        "axis": "La structure intime de l'espace : Continu vibrant vs Réseau discret",
+        "thesis1Stance": "Cordes : L'espace-temps est continu mais possède des dimensions spatiales microscopiques repliées. Les singularités sont effacées par la taille minimale de la corde qui ne peut pas être ponctuelle.",
+        "thesis2Stance": "Boucles : L'espace est intrinsèquement granulaire et discontinu. Il existe un 'atome de volume' minimal insécable. Il ne peut donc pas y avoir de singularité infinie au Big Bang, mais un 'Big Bounce' (rebond quantique).",
+        "analysis": "Deux ontologies de l'espace : l'une conserve un espace continu pluri-dimensionnel, l'autre détruit l'espace continu pour le remplacer par un réseau combinatoire de spins."
+      },
+      {
+        "axis": "Critère de scientificité et réfutabilité poppérienne",
+        "thesis1Stance": "Cordes : La cohérence mathématique exceptionnelle, la non-existence d'anomalies et la résolution des paradoxes des trous noirs constituent des confirmations théoriques indirectes suffisantes pour poursuivre (Dawid).",
+        "thesis2Stance": "Boucles & Critiques (Smolin, Woit) : Une théorie qui prédit un 'paysage' (landscape) de 10⁵⁰⁰ univers possibles sans jamais faire une seule prédiction numérique testable au LHC cesse d'être de la physique pour devenir des mathématiques pures.",
+        "analysis": "Crise épistémologique majeure de la physique théorique moderne : peut-on assouplir le critère de réfutabilité poppérien face à l'inaccessibilité de l'échelle de Planck ?"
+      }
+    ],
+    "empiricalTests": [
+      {
+        "experimentName": "Les résultats du Large Hadron Collider (LHC - CERN)",
+        "yearOrContext": "2010-2024 - Découverte du boson de Higgs et runs à 13-14 TeV",
+        "protocol": "Recherche systématique de particules supersymétriques (gluinos, neutralinos, squarks) prédites comme indispensables à basse énergie par les modèles supersymétriques de cordes.",
+        "finding": "Aucune trace de partenaire supersymétrique n'a été détectée dans la fenêtre d'énergie explorée (jusqu'à ~2 TeV), repoussant les masses hypothétiques à des échelles très élevées et obligeant les théoriciens des cordes à affiner ou compliquer leurs modèles.",
+        "impactOnDebate": "A porté un coup dur aux versions simples de la théorie des cordes et redonné du souffle aux approches non supersymétriques comme la gravité quantique à boucles."
+      },
+      {
+        "experimentName": "Mesure des sursauts gamma lointains par le télescope spatial Fermi (Fermi LAT)",
+        "yearOrContext": "2009 - Sursaut gamma GRB 090510",
+        "protocol": "Mesure de photons de très haute énergie (GeV) et de basse énergie émis simultanément par une explosion cataclysmique à plus de 7 milliards d'années-lumière. Certains modèles de discrétisation de l'espace-temps prédisent que les photons hautement énergétiques voyagent plus lentement à travers les mailles de l'espace (violation de l'invariance de Lorentz).",
+        "finding": "Les deux photons sont arrivés sur le détecteur avec moins d'un millième de seconde d'écart, éliminant les versions les plus naïves de variation de la vitesse de la lumière liée à la granularité de l'espace-temps.",
+        "impactOnDebate": "Prouve que l'astrophysique des hautes énergies commence à contraindre concrètement les modèles théoriques de gravité quantique."
+      }
+    ],
+    "qa": [
+      {
+        "question": "Pourquoi dit-on que la théorie des cordes n'est pas testable ?",
+        "answer": "Parce qu'elle n'a pas une seule solution, mais un 'paysage' estimé à 10⁵⁰⁰ solutions différentes selon la manière dont les 6 dimensions supplémentaires sont repliées. Si une théorie est compatible avec n'importe quelle valeur de charge ou de masse selon la façon dont on enroule ses variétés mathématiques, elle ne peut rien prédire d'irréfutable."
+      },
+      {
+        "question": "Que devient le Big Bang selon la Gravité Quantique à Boucles ?",
+        "answer": "En gravité quantique à boucles, il n'y a jamais eu d'instant zéro où la densité et la température étaient 'infinies'. Comme l'espace a un quantum minimal insécable, l'univers en contraction préalable a atteint la densité maximale permise, puis a 'rebondi' sous l'effet d'une pression répulsive quantique : c'est le modèle du Big Bounce."
+      },
+      {
+        "question": "Les deux théories pourraient-elles être deux facettes d'une même vérité ?",
+        "answer": "C'est l'espoir de plusieurs théoriciens modérés (comme Lee Smolin lui-même à ses débuts) : les boucles pourraient décrire la géométrie microscopique non perturbative de l'espace-temps, tandis que les cordes décriraient les excitations et les particules de matière à plus grande échelle. Des ponts mathématiques (comme la correspondance AdS/CFT) suggèrent que des équivalences formelles existent entre gravité et théories de jauge."
+      }
+    ],
     "positions": [
       {
         "name": "Théorie des Cordes (M-Theory & Supersymétrie)",
-        "summary": "Les particules ponctuelles sont remplacées par des cordes unidimensionnelles vibrant dans un espace-temps doté de dimensions spatiales compactifiées (10 ou 11 dimensions). Elle incorpore naturellement le graviton et vise l'unification totale des quatre interactions fondamentales.",
-        "keyFigures": ["Edward Witten", "Brian Greene", "Leonard Susskind"]
+        "summary": "Les constituants fondamentaux de l'univers ne sont pas des points sans dimension, mais des cordes 1D vibrantes dans un espace-temps à 10 ou 11 dimensions. Elle incorpore naturellement le graviton et vise l'unification des 4 interactions fondamentales.",
+        "keyArguments": [
+          "Elle est la seule théorie qui résout les infinis de la gravité tout en incluant le modèle standard de la matière.",
+          "Elle génère automatiquement le graviton de spin 2 sans avoir à l'ajouter à la main.",
+          "Elle a permis des avancées mathématiques spectaculaires (symétrie miroir, dualités, correspondance holographique AdS/CFT de Maldacena)."
+        ],
+        "counterCritique": "Reproche adressé à la LQG : 'La gravité quantique à boucles n'est pas une théorie unifiée : elle ignore les forces nucléaires, n'explique pas la masse des particules et n'a jamais réussi à redémontrer proprement la relativité générale continue à grande échelle (limite semi-classique).'",
+        "keyFigures": [
+          "Edward Witten",
+          "Brian Greene",
+          "Leonard Susskind",
+          "Juan Maldacena"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade D",
+          "levelText": "Niveau 4 — Modèle théorique déductif",
+          "justification": "Cohérence mathématique exceptionnelle et suppression des divergences infinies, mais aucune signature expérimentale directe à l'échelle de Planck. L'absence de particules supersymétriques au LHC (Runs 2 et 3) repousse ses prédictions à des échelles encore plus inaccessibles."
+        }
       },
       {
         "name": "Gravité Quantique à Boucles (Loop Quantum Gravity - LQG)",
-        "summary": "Approche non-perturbative et strictement indépendante du fond (background independent). L'espace-temps n'est pas une arène continue externe, mais un tissu quantifié formé d'un réseau de spins discrets dont les mailles définissent le volume et la surface minimale.",
-        "keyFigures": ["Carlo Rovelli", "Lee Smolin", "Abhay Ashtekar"]
+        "summary": "Théorie non-perturbative et strictement indépendante du fond : l'espace-temps lui-même n'est pas une arène préexistante continue, mais un tissu quantifié formé d'un réseau de spins discrets composés de quantas élémentaires d'espace.",
+        "keyArguments": [
+          "Elle respecte scrupuleusement la grande leçon d'Einstein : l'espace-temps n'est pas un décor fixe, il EST le champ gravitationnel.",
+          "Elle ne requiert aucune dimension supplémentaire invisible ni aucune particule hypothétique introuvable (pas besoin de supersymétrie).",
+          "Elle élimine naturellement les singularités des trous noirs et du Big Bang par la discrétisation quantique de la géométrie."
+        ],
+        "counterCritique": "Reproche adressé aux cordes : 'La théorie des cordes a abandonné le cœur de la physique théorique : elle n'est pas indépendante du fond et s'est perdue dans un labyrinthe de 10⁵⁰⁰ univers invérifiables (le multiverse), devenant un dogme sociologique plus qu'une science.'",
+        "keyFigures": [
+          "Carlo Rovelli",
+          "Lee Smolin",
+          "Abhay Ashtekar",
+          "Francesca Vidotto"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade D",
+          "levelText": "Niveau 4 — Modèle théorique déductif",
+          "justification": "Quantification canonique rigoureuse indépendante du fond sans dimensions supplémentaires, mais inaccessibilité observationnelle directe des quanta d'espace à 10⁻³⁵ m. Les observations astrophysiques de Fermi LAT sur les sursauts gamma ont réfuté les versions de dispersion naïve."
+        }
       }
     ],
     "readings": [
       {
         "level": "Facile",
         "title": "Par-delà le visible : La réalité du monde quantique",
-        "type": "Essai de vulgarisation conceptuelle",
+        "type": "Essai grand public",
         "author": "Carlo Rovelli (Odile Jacob)",
         "link": "https://www.odilejacob.fr/catalogue/sciences/physique-chimie/par-dela-le-visible_9782738135087.php",
-        "note": "Une introduction lumineuse et sans mathématiques lourdes à l'idée d'un espace-temps granulaire."
+        "note": "Introduction conceptuelle lumineuse sans formalisme mathématique lourd.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Moyen",
         "title": "The Trouble with Physics: The Rise of String Theory, the Fall of a Science",
-        "type": "Essai critique et épistémologique",
+        "type": "Essai épistémologique",
         "author": "Lee Smolin (Mariner Books)",
         "link": "https://www.goodreads.com/book/show/108939.The_Trouble_with_Physics",
-        "note": "Une radiographie stimulante de la sociologie de la recherche en physique théorique et du risque d'hégémonie académique."
+        "note": "Critique de la prédominance académique des cordes et plaidoyer pour la diversité méthodologique.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Difficile",
-        "title": "Covariant Loop Quantum Gravity: An Elementary Introduction to Quantum Gravity and Spinfoam Theory",
-        "type": "Manuel académique",
+        "title": "Covariant Loop Quantum Gravity",
+        "type": "Cours académique avancé",
         "author": "Carlo Rovelli & Francesca Vidotto (Cambridge University Press)",
         "link": "https://doi.org/10.1017/CBO9781107706910",
-        "note": "Formalisation mathématique rigoureuse de la dynamique des mousses de spin et de l'invariance par difféomorphisme."
+        "note": "Formalisation rigoureuse de la dynamique des mousses de spin.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Expert",
-        "title": "Superstring Theory (Volumes 1 & 2)",
-        "type": "Traité canonique",
-        "author": "Michael Green, John Schwarz & Edward Witten (Cambridge University Press)",
+        "title": "Superstring Theory (Vol. 1 & 2)",
+        "type": "Traité théorique canonique",
+        "author": "Green, Schwarz & Witten (Cambridge University Press)",
         "link": "https://doi.org/10.1017/CBO9781107706286",
-        "note": "Le socle mathématique complet fondant la révolution des supercordes et la supersymétrie d'espace-temps."
+        "note": "Le socle mathématique exhaustif fondant la supersymétrie d'espace-temps.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       }
     ]
   },
@@ -162,18 +559,142 @@
     "id": "psycho-evo",
     "domain": "Sciences Cognitives & Anthropologie",
     "title": "Psychologie Évolutionniste : Modularité massive vs Plasticité culturelle",
-    "definition": "Désaccord sur la part respective des modules cognitifs spécialisés sélectionnés au Pléistocène et de la plasticité neuronale co-façonnée par la culture cumulative dans l'explication des comportements humains contemporains.",
-    "guardrail": "Rejet absolu du darwinisme social, du réductionnisme génétique simpliste et des légitimations idéologiques des inégalités. Le débat confronte des hypothèses d'architecture cognitive soumises aux contraintes phylogénétiques et anthropologiques.",
-    "positions": [
+    "subtitle": "Notre cerveau est-il un couteau suisse de modules pré-programmés au Pléistocène ou un organe malléable façonné par la culture ?",
+    "definition": "Désaccord scientifique sur l'architecture de la cognition humaine : nos comportements sociaux contemporains découlent-ils principalement de centaines de modules mentaux spécialisés sélectionnés par l'évolution biologique pour résoudre les problèmes de nos ancêtres chasseurs-cueilleurs (adaptationnisme cognitif), ou de mécanismes généraux d'apprentissage plastique co-évoluant avec la transmission culturelle cumulative ?",
+    "guardrail": "Rejet absolu et sans concession du darwinisme social, de l'eugénisme, du sexisme essentialiste et de toute tentative de légitimer les injustices sociales par 'l'ordre naturel' (sophisme naturaliste : confondre ce qui EST avec ce qui DOIT ÊTRE). Le débat académique confronte des hypothèses d'architecture cognitive soumises à la génétique des populations, aux neurosciences et à l'anthropologie comparée.",
+    "glossary": [
       {
-        "name": "Thèse de la Modularité Massive (Adaptationnisme cognitif)",
-        "summary": "L'esprit humain est une collection de centaines de modules mentaux spécialisés (algorithmes darwiniens), façonnés par la sélection naturelle pour résoudre des problèmes adaptatifs ancestraux spécifiques (détection des tricheurs, évitement des toxines, choix de partenaire).",
-        "keyFigures": ["Leda Cosmides", "John Tooby", "Steven Pinker"]
+        "term": "L'Environnement d'Adaptabilité Ancestrale (EEA)",
+        "definition": "Période du Pléistocène (environ 2 millions d'années à 10 000 ans avant notre ère) durant laquelle l'essentiel de l'anatomie et de la psychologie humaine s'est stabilisé dans des bandes de chasseurs-cueilleurs dans la savane africaine.",
+        "whyItMatters": "Nos gènes n'auraient pas eu le temps biologique de muter significativement depuis la révolution néolithique (10 000 ans) : nous vivrions avec un cerveau de l'âge de pierre dans un monde numérique."
       },
       {
-        "name": "Co-évolution Gène-Culture & Plasticité Étendue",
-        "summary": "L'adaptationnisme strict sous-estime la plasticité développementale et la causalité descendante de la culture cumulative. L'environnement d'adaptabilité ancestrale (EEA) est souvent reconstruit 'a posteriori' de manière spéculative ('just-so stories').",
-        "keyFigures": ["Joseph Henrich", "Stephen Jay Gould", "Kevin Laland"]
+        "term": "Thèse de la Modularité Massive (Le Couteau Suisse Mental)",
+        "definition": "Postulat selon lequel l'esprit n'est pas un processeur général polyvalent, mais un assemblage de circuits spécialisés ('algorithmes darwiniens') conçus pour des tâches précises : choisir un partenaire sain, repérer les tricheurs, éviter les toxines, surveiller les serpents.",
+        "whyItMatters": "S'oppose au modèle de la 'tabula rasa' (page blanche) où l'esprit apprendrait tout par imitation sociale indifférenciée."
+      },
+      {
+        "term": "Écoinçon Évolutif (Spandrel - Gould & Lewontin)",
+        "definition": "Caractéristique biologique ou comportementale qui n'a pas été directement sélectionnée pour une fonction adaptative, mais qui est un simple sous-produit secondaire d'une autre adaptation (par analogie avec les écoinçons architecturaux entre deux arches).",
+        "whyItMatters": "La lecture, l'écriture ou la pratique de la musique sont de toute évidence des écoinçons culturels récents, et non des modules génétiques pré-câblés au Pléistocène."
+      },
+      {
+        "term": "Co-évolution Gène-Culture & Effet Cliquet (Joseph Henrich)",
+        "definition": "Mécanisme par lequel la culture cumulative modifie directement les pressions de sélection génétique de l'espèce humaine (ex: la maîtrise du feu et de la cuisson a réduit notre mâchoire et nos intestins au profit de notre cerveau).",
+        "whyItMatters": "Ce n'est pas seulement le gène qui dicte la culture ; la culture façonne l'évolution biologique en retour."
+      },
+      {
+        "term": "Le Biais WEIRD (Western, Educated, Industrialized, Rich, Democratic)",
+        "definition": "Constat épistémologique dressé par Henrich, Heine et Norenzayan : 95% des études en psychologie expérimentale sont menées sur des étudiants d'universités occidentales représentant moins de 12% de l'humanité.",
+        "whyItMatters": "Des traits comportementaux déclarés 'universaux humains de nature biologique' par la psycho-évo se révèlent souvent être de pures particularités de sociétés occidentales individualistes."
+      }
+    ],
+    "agreements": [
+      {
+        "point": "Le cerveau humain est un produit incontestable de l'évolution",
+        "explanation": "Tous les biologistes et anthropologues s'accordent : la matière cérébrale et les organes sensoriels ont été façonnés par la sélection naturelle. L'esprit ne flotte pas en dehors des lois de la phylogénie animale."
+      },
+      {
+        "point": "L'existence de biais universels ancestraux indiscutables",
+        "explanation": "L'attirance instinctive universelle pour les aliments sucrés et gras (hautement adaptative dans un milieu de pénurie calorique, mais catastrophique aujourd'hui) ou la peur spontanée des serpents et des araignées (comparée à l'absence de peur innée des prises électriques mortelles) sont unanimement reconnues comme des empreintes de notre passé évolutif."
+      },
+      {
+        "point": "Le rejet de la 'Tabula Rasa' pure",
+        "explanation": "L'idée béhavioriste naïve du début du XXe siècle selon laquelle un nouveau-né serait une cire molle totalement malléable sans aucune prédisposition biologique est définitivement caduque dans l'ensemble de la communauté scientifique."
+      }
+    ],
+    "divergences": [
+      {
+        "axis": "Architecture : Centaines de modules spécialisés vs Plasticité générale",
+        "thesis1Stance": "Psychologie Évolutionniste : L'esprit est massivement modulaire. Un mécanisme d'apprentissage général ne peut pas résoudre les problèmes vitaux (trop d'hypothèses possibles, problème du 'frame problem'). Il existe des circuits pré-câblés spécialisés pour la détection des tricheurs, la jalousie sexuelle, la grammaire innée.",
+        "thesis2Stance": "Anthropologie Évolutionnaire & Plasticité : L'adaptation humaine par excellence est la flexibilité neuronale et l'intelligence générale. Le néocortex humain est caractérisé par une néoténie prolongée permettant d'incorporer des 'logiciels culturels' radicalement différents selon l'environnement.",
+        "analysis": "Couteau suisse spécialisé contre moteur d'apprentissage plastique surdimensionné."
+      },
+      {
+        "axis": "Méthode : Reconstitution de l'EEA vs Risque des 'Histoires comme ça' (Just-So Stories)",
+        "thesis1Stance": "Psychologie Évolutionniste : En analysant la biologie de la reproduction et les fossiles, on peut déduire rigoureusement les défis adaptatifs du Pléistocène et faire des prédictions comportementales testables en laboratoire.",
+        "thesis2Stance": "Biologistes Critiques (Gould, Lewontin, Laland) : On ne sait presque rien de la vie sociale fine, des croyances et des tabous des hominidés d'il y a 500 000 ans. Créer un scénario séduisant pour expliquer a posteriori pourquoi les hommes préfèrent les femmes plus jeunes ou le bleu au rose est un roman spéculatif, pas une science empirique rigoureuse.",
+        "analysis": "Problème épistémique majeur de la testabilité rétrospective en biologie historique."
+      },
+      {
+        "axis": "Origine des différences de genre comportementales",
+        "thesis1Stance": "Psychologie Évolutionniste (Théorie de l'investissement parental de Trivers) : Les femmes investissant obligatoirement 9 mois de gestation et de lactation alors que les hommes produisent des millions de spermatozoïdes, la sélection naturelle a inévitablement forgé des psychologies du choix de partenaire asymétriques (sélection de ressources vs sélection de jeunesse/fertilité).",
+        "thesis2Stance": "Sciences Sociales & Co-évolution : Ces asymétries sont massivement amplifiées ou inversées par les structures économiques, le patriarcat historique et la division du travail. Lorsque l'égalité de genre et l'indépendance économique des femmes augmentent dans une société, ces écarts de préférences s'atténuent considérablement.",
+        "analysis": "Nature biologique innée vs construction culturelle et institutionnelle surdéterminante."
+      }
+    ],
+    "empiricalTests": [
+      {
+        "experimentName": "La Tâche de Sélection de Wason et le Détecteur de Tricheurs (Leda Cosmides, 1989)",
+        "yearOrContext": "1989 - Psychologie cognitive expérimentale",
+        "protocol": "On présente 4 cartes à des sujets (ex: A, B, 4, 7) et on leur demande de vérifier la règle 'Si une carte a une voyelle d'un côté, elle a un chiffre pair de l'autre'. Moins de 10% des gens réussissent ce test logique abstrait. Cosmides transforme ensuite la tâche avec une règle sociale : 'Si vous buvez de l'alcool, vous devez avoir plus de 18 ans' (cartes : Boit de la bière, Boit du soda, 25 ans, 16 ans).",
+        "finding": "Plus de 75% des sujets réussissent immédiatement le test sous sa forme contractuelle sociale en vérifiant la carte 'Bière' et la carte '16 ans'.",
+        "impactOnDebate": "Présenté par Cosmides comme la preuve expérimentale d'un module cognitif dédié et universel de 'détection des tricheurs' dans les contrats d'échange social."
+      },
+      {
+        "experimentName": "Le Jeu de l'Ultimatum dans 15 Sociétés Traditionnelles (Henrich, Boyd, Bowles et al., 2001)",
+        "yearOrContext": "2001 - Étude anthropologique et économique comparative mondiale",
+        "protocol": "Administration du jeu de l'ultimatum (un joueur propose un partage d'argent, l'autre accepte ou refuse pour les deux) à travers 15 sociétés traditionnelles de petite échelle (chasseurs-cueilleurs Hadza, éleveurs nomades, agriculteurs sur brûlis d'Amazonie).",
+        "finding": "Effondrement des prédictions universalistes : là où les occidentaux partagent en moyenne à 50/50, les offres moyennes varient de 26% (chez les Machiguenga du Pérou, société individualiste sans coopération collective) à 58% (chez les Lamalera d'Indonésie, chasseurs de baleines où le partage communautaire est vital).",
+        "impactOnDebate": "Démontre que les normes de justice et de coopération ne sont pas un module psychologique pléistocène rigide, mais sont co-façonnées par l'organisation économique locale."
+      }
+    ],
+    "qa": [
+      {
+        "question": "Dire qu'un comportement est issu de l'évolution signifie-t-il qu'on ne peut pas le changer ?",
+        "answer": "Absolument pas, et c'est l'erreur la plus commune (le fatalisme génétique). Les humains sont nés myopes depuis des millénaires, mais nous avons inventé les lunettes. Même si un comportement avait une racine évolutive (comme la préférence pour les calories grasses), l'être humain peut s'auto-réguler, inventer des lois morales et transformer son environnement pour contrecarrer ses instincts."
+      },
+      {
+        "question": "Qu'est-ce que le sophisme naturaliste ?",
+        "answer": "C'est l'erreur logique identifiée par le philosophe David Hume consistant à déduire ce qui 'doit être' (la morale, le droit) de ce qui 'est' (la nature biologique). Si la nature présente des comportements violents ou d'agression territoriale chez les chimpanzés, cela n'implique en aucun cas que la violence soit 'bonne', 'souhaitable' ou 'justifiée' dans une société humaine."
+      },
+      {
+        "question": "Pourquoi la psycho-évo suscite-t-elle autant de passions politiques ?",
+        "answer": "Parce qu'elle touche directement à l'image que nous avons de nous-mêmes, à l'égalité entre les sexes et à la liberté humaine. Les progressistes craignent souvent qu'elle serve à figer l'ordre établi sous prétexte de 'nature humaine intemporelle', tandis que les défenseurs de la psycho-évo reprochent aux sociologues de nier la réalité biologique de l'animal humain par idéologie."
+      }
+    ],
+    "positions": [
+      {
+        "name": "Modularité Massive & Adaptationnisme Cognitif",
+        "summary": "Le cerveau est structuré en modules spécifiques résolvant des problèmes adaptatifs ancestraux (détection des tricheurs, évitement des toxines, sélection des partenaires, investissement parental).",
+        "keyArguments": [
+          "L'évolution ne produit jamais d'organes généralistes : le cœur pompe le sang, les poumons respirent ; le cerveau est pareillement un faisceau d'outils spécialisés.",
+          "Les bébés humains démontrent dès les premiers mois des intuitions précoces pour la physique naïve, les visages et les agents intentionnels.",
+          "La sélection naturelle a sculpté la psychologie humaine sur des millions d'années d'adaptation au Pléistocène."
+        ],
+        "counterCritique": "Reproche adressé à la sociologie pure : 'La thèse de la page blanche est une illusion idéologique qui refuse de voir que l'être humain est un primate soumis aux lois de la reproduction sexuée et de la sélection naturelle.'",
+        "keyFigures": [
+          "Leda Cosmides",
+          "John Tooby",
+          "Steven Pinker",
+          "David Buss"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade C",
+          "levelText": "Niveau 3 — Faible niveau de preuve",
+          "justification": "Résultats expérimentaux répliqués sur des tâches spécifiques de laboratoire (ex: tâche de sélection de Wason en contexte de contrat social), mais inférence rétrospective sur l'EEA pléistocène non falsifiable directement. Biais d'échantillonnage WEIRD fréquent."
+        }
+      },
+      {
+        "name": "Co-évolution Gène-Culture & Plasticité Cérébrale Étendue",
+        "summary": "L'adaptationnisme strict sous-estime la plasticité neuronale et l'effet cliquet de la culture cumulative. L'environnement d'adaptation ancestrale (EEA) est souvent reconstruit 'a posteriori' de manière spéculative.",
+        "keyArguments": [
+          "La culture cumulative est notre véritable niche écologique : nous survivons dans l'Arctique ou le désert non grâce à nos gènes, mais grâce aux savoirs transmis.",
+          "La neuroplasticité démontre que des zones cérébrales sont continuellement recyclées (ex: la région de la forme visuelle des mots pour la lecture, inventée il y a 5 000 ans).",
+          "La plupart des prétendus universaux psychologiques sont des artefacts d'échantillons WEIRD."
+        ],
+        "counterCritique": "Reproche adressé à la psycho-évo classique : 'Elle produit des fables pan-adaptationnistes invérifiables en projetant les stéréotypes de genre de la classe moyenne américaine des années 1950 dans la savane du Pléistocène.'",
+        "keyFigures": [
+          "Joseph Henrich",
+          "Stephen Jay Gould",
+          "Kevin Laland",
+          "Robert Boyd"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade B",
+          "levelText": "Niveau 2 — Présomption scientifique",
+          "justification": "Études anthropologiques comparatives quantitatives menées à l'échelle mondiale (15 sociétés traditionnelles, Henrich), corroborées par la génomique des populations (ex: co-évolution de la persistance de la lactase et du pastoralisme)."
+        }
       }
     ],
     "readings": [
@@ -181,33 +702,41 @@
         "level": "Facile",
         "title": "L'animal social à l'épreuve de l'évolution",
         "type": "Synthèse interdisciplinaire",
-        "author": "Revue Sciences Humaines (Grands Dossiers)",
+        "author": "Sciences Humaines",
         "link": "https://www.scienceshumaines.com/",
-        "note": "Présentation pédagogique des principaux axes de friction entre anthropologie culturelle et sociobiologie."
+        "note": "Vue d'ensemble équilibrée des tensions théoriques entre anthropologie et sociobiologie.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Moyen",
         "title": "The Adapted Mind: Evolutionary Psychology and the Generation of Culture",
         "type": "Recueil fondateur",
-        "author": "Jerome H. Barkow, Leda Cosmides & John Tooby (Oxford University Press)",
+        "author": "Barkow, Cosmides & Tooby (Oxford University Press)",
         "link": "https://global.oup.com/academic/product/the-adapted-mind-9780195101072",
-        "note": "L'ouvrage fondateur qui a posé le cadre conceptuel standard de la psychologie évolutionniste contemporaine."
+        "note": "L'acte de naissance de la psychologie évolutionniste contemporaine.",
+        "evidenceGrade": "Grade C",
+        "evidenceLevel": "Niveau 3"
       },
       {
         "level": "Difficile",
-        "title": "The Spandrels of San Marco and the Panglossian Paradigm: A Critique of the Adaptationist Programme",
+        "title": "The Spandrels of San Marco and the Panglossian Paradigm",
         "type": "Article épistémologique historique",
-        "author": "Stephen Jay Gould & Richard Lewontin (Proc. R. Soc. Lond. B, 1979)",
+        "author": "Gould & Lewontin (Proc. R. Soc. Lond. B, 1979)",
         "link": "https://doi.org/10.1098/rspb.1979.0086",
-        "note": "Texte séminal dénonçant le biais consistant à traiter tout trait comportemental comme une adaptation sélectionnée."
+        "note": "Critique majeure du biais ultra-adaptationniste en biologie de l'évolution.",
+        "evidenceGrade": "Grade D",
+        "evidenceLevel": "Niveau 4"
       },
       {
         "level": "Expert",
-        "title": "The WEIRDest People in the World: How the West Became Psychologically Peculiar and Particularly Prosperous",
+        "title": "The WEIRDest People in the World",
         "type": "Monographie anthropologique & quantitative",
         "author": "Joseph Henrich (Farrar, Straus and Giroux)",
         "link": "https://us.macmillan.com/books/9780374173227/theweirdestpeopleintheworld",
-        "note": "Démonstration empirique de la co-évolution gène-culture et de la variation psychologique interculturelle profonde."
+        "note": "Modélisation empirique de la co-évolution gène-culture et de la plasticité psychologique.",
+        "evidenceGrade": "Grade B",
+        "evidenceLevel": "Niveau 2"
       }
     ]
   },
@@ -215,18 +744,143 @@
     "id": "economie-comportementale",
     "domain": "Économie & Sciences de la Décision",
     "title": "Rationalité Limitée vs Théorie du Choix Rationnel",
-    "definition": "Divergence théorique et empirique entre le paradigme néoclassique fondant l'analyse sur des agents maximisateurs parfaitement rationnels (homo economicus) et l'économie comportementale démontrant des biais cognitifs et heuristiques systématiques.",
-    "guardrail": "Exclusion des pamphlets anticapitalistes primaires comme des postures dogmatiques rejetant les données expérimentales. Le débat concerne la puissance prédictive, la parcimonie formelle et la validité descriptive des axiomes de rationalité.",
+    "subtitle": "L'homo economicus maximisateur est-il un modèle idéal prédictif ou une fiction démentie par la psychologie humaine ?",
+    "definition": "Divergence théorique, méthodologique et politique entre le paradigme néoclassique standard (qui modélise les agents économiques comme des optimiseurs rationnels cohérents cherchant à maximiser leur fonction d'utilité sous contrainte) et le programme de l'économie comportementale (qui prouve expérimentalement que les humains décident au moyen d'heuristiques cognitives sous rationalité limitée, générant des biais systématiques et prévisibles).",
+    "guardrail": "Exclusion formelle des pamphlets anticapitalistes moralisateurs comme des dogmatismes rejetant par principe la preuve expérimentale. Le débat porte sur le statut de la science économique : doit-elle être une axiomatique déductive et normative privilégiant la parcimonie formelle des modèles d'équilibre, ou une science empirique et descriptive intégrant la psychologie réelle du cerveau humain ?",
+    "glossary": [
+      {
+        "term": "Homo Economicus & Choix Rationnel",
+        "definition": "Modèle théorique postulant un agent doté de préférences stables, transitives et complètes, disposant d'une capacité illimitée de calcul et agissant exclusivement pour maximiser son utilité espérée.",
+        "whyItMatters": "C'est l'axiome fondateur de toute la microéconomie néoclassique et des modèles d'efficience financière des marchés."
+      },
+      {
+        "term": "Rationalité Limitée (Bounded Rationality - Herbert Simon)",
+        "definition": "Concept montrant que face à l'incertitude, au manque de temps et aux limites de traitement de l'information, les agents ne 'maximisent' pas, mais 'satisfont' (satisficing) en choisissant la première solution acceptable.",
+        "whyItMatters": "Il a valu le prix Nobel à Simon en 1978 en brisant le mythe de l'omniscience calculatoire des agents."
+      },
+      {
+        "term": "Théorie des Perspectives (Prospect Theory - Kahneman & Tversky)",
+        "definition": "Modèle mathématique alternatif à la théorie de l'utilité espérée, montrant que les humains évaluent les résultats en termes de gains et pertes par rapport à un point de référence (et non en richesse absolue) et sous-pondèrent les probabilités modérées tout en sur-pondérant les probabilités infimes.",
+        "whyItMatters": "Elle décrit avec exactitude les choix réels des êtres humains face au risque et aux loteries."
+      },
+      {
+        "term": "Aversion aux Pertes (Loss Aversion)",
+        "definition": "Constat psychologique robuste : la douleur psychologique ressentie lors d'une perte est environ deux fois plus intense que le plaisir procuré par un gain équivalent (perdre 100€ fait deux fois plus mal que gagner 100€ ne réjouit).",
+        "whyItMatters": "Explique l'effet de dotation (surévaluer ce que l'on possède déjà) et l'inertie des choix d'investissement."
+      },
+      {
+        "term": "Le Nudge (Coup de pouce paternaliste libertarien - Thaler & Sunstein)",
+        "definition": "Modification de l'architecture de choix qui altère le comportement des gens de manière prévisible sans interdire aucune option ni modifier de façon significative les incitations financières (ex: mettre par défaut le don d'organes tout en laissant la liberté de refuser).",
+        "whyItMatters": "Application politique majeure de l'économie comportementale, dénoncée par certains comme une manipulation étatique paternaliste."
+      }
+    ],
+    "agreements": [
+      {
+        "point": "Les individus réels violent systématiquement les axiomes de von Neumann-Morgenstern",
+        "explanation": "Tous les économistes reconnaissent aujourd'hui les résultats empiriques des laboratoires : mis devant des choix sous risque, les humains ne calculent pas des espérances d'utilité linéaires et tombent dans des paradoxes démontrés (paradoxe d'Allais, paradoxe d'Ellsberg)."
+      },
+      {
+        "point": "Les incitations économiques modifient les comportements",
+        "explanation": "Comportementalistes et néoclassiques s'accordent sur le fait que les taxes, les subventions et les prix orientent massivement les décisions ; l'économie comportementale ne nie pas l'importance des incitations, elle affine leur fonctionnement cognitif."
+      },
+      {
+        "point": "L'expertise et la répétition réduisent les anomalies simples",
+        "explanation": "Sur des marchés où les transactions se répètent des milliers de fois et où l'apprentissage par l'erreur est immédiat, les comportements se rapprochent davantage des prédictions des modèles néoclassiques que lors de choix uniques et rares (ex: acheter une maison, choisir sa retraite)."
+      }
+    ],
+    "divergences": [
+      {
+        "axis": "Agrégation de Marché : Le marché neutralise-t-il les biais cognitifs individuels ?",
+        "thesis1Stance": "Paradigme Néoclassique (Friedman, Fama) : Oui. Peu importe que des traders individuels aient des biais irrationnels : les opérateurs rationnels exploitent les opportunités d'arbitrage, absorbent les gains et éliminent ou marginalisent les acteurs irrationnels. Le prix de marché reste efficient et 'as if' (comme si) les agents étaient rationnels.",
+        "thesis2Stance": "Économie Comportementale & Finance Comportementale (Shiller, Thaler) : Non. Les limites à l'arbitrage (risques de liquidité, bruit) empêchent les rationnels de corriger les prix. Les biais individuels sont corrélés et provoquent des bulles spéculatives massives et des krachs récurrents (ex: bulle internet de 2000, crise des subprimes de 2008).",
+        "analysis": "Le grand débat : l'irrationalité individuelle s'annule-t-elle par la loi des grands nombres, ou contamine-t-elle le système macroéconomique par mimétisme et panique ?"
+      },
+      {
+        "axis": "Méthodologie : Modèle normatif parcimonieux vs Réalisme descriptif",
+        "thesis1Stance": "Néoclassiques : La force d'une théorie ne réside pas dans le réalisme de ses hypothèses (qui sont par nature simplificatrices), mais dans sa puissance prédictive et son élégance mathématique formelle (thèse de Milton Friedman, 1953).",
+        "thesis2Stance": "Comportementalistes : Une science qui s'appuie sur des hypothèses psychologiques manifestement fausses pour déduire des équilibres abstraits finit par se couper du réel et échoue à prévoir les crises financières majeures.",
+        "analysis": "Opposition épistémologique entre le modèle axiomatique déductif pur et la science empirique inductive fondée sur l'expérimentation."
+      },
+      {
+        "axis": "Politiques Publiques : Souveraineté du consommateur vs Paternalisme libertarien",
+        "thesis1Stance": "Libéraux / Choix Rationnel : Les individus sont les seuls juges légitimes de leur propre bien-être. Toute ingérence étatique visant à 'corriger' leurs choix sous prétexte de biais cognitifs ouvre la porte à la bureaucratie infantilisante et au risque de capture politique.",
+        "thesis2Stance": "Économie Comportementale appliquée (Nudge) : L'architecture de choix neutre n'existe pas : il y a toujours une option par défaut. Mieux vaut concevoir cette option scientifiquement pour aider les gens à épargner pour leur retraite ou à manger plus sainement.",
+        "analysis": "Dilemme démocratique : la liberté de se tromper contre l'ingénierie comportementale bienveillante."
+      }
+    ],
+    "empiricalTests": [
+      {
+        "experimentName": "L'Expérience des Tasses de Cornell et l'Effet de Dotation (Kahneman, Knetsch & Thaler, 1990)",
+        "yearOrContext": "1990 - Journal of Political Economy",
+        "protocol": "On attribue au hasard de belles tasses universitaires à la moitié des étudiants d'une classe. On organise ensuite un marché libre : les propriétaires peuvent vendre leur tasse et les autres peuvent l'acheter. Selon la théorie économique classique, environ la moitié des tasses devraient être échangées (les tasses allant à ceux qui les valorisent le plus).",
+        "finding": "Le volume réel de transactions a été inférieur à un quart de ce que prédisait la théorie. Le prix minimum exigé par les vendeurs (environ 5,25$) était plus de deux fois supérieur au prix maximum proposé par les acheteurs (environ 2,50$). Le simple fait de posséder physiquement l'objet pendant quelques minutes a doublé sa valeur subjective.",
+        "impactOnDebate": "Démonstration éclatante de l'aversion aux pertes et remise en cause directe du théorème de Coase en économie du droit."
+      },
+      {
+        "experimentName": "Le Problème de la Maladie Asiatique et l'Effet de Cadrage (Tversky & Kahneman, 1981)",
+        "yearOrContext": "1981 - Science",
+        "protocol": "Face à une maladie menaçant 600 personnes, le Groupe 1 choisit entre le Programme A ('200 personnes sauvées à coup sûr') et le Programme B ('1/3 de chance de sauver 600 personnes, 2/3 de chance de sauver personne'). Le Groupe 2 choisit entre le Programme C ('400 personnes meurent à coup sûr') et le Programme D ('1/3 de chance que personne ne meure, 2/3 de chance que 600 meurent'). Les deux problèmes sont formellement identiques.",
+        "finding": "72% choisissent A (aversion au risque face aux gains), mais 78% choisissent D (recherche du risque face aux pertes).",
+        "impactOnDebate": "Prouve que les décisions dépendent du 'cadrage linguistique' et non des distributions statistiques réelles, violant frontalement les axiomes de rationalité."
+      }
+    ],
+    "qa": [
+      {
+        "question": "L'économie comportementale dit-elle que nous sommes tous 'idiots' ou 'irrationnels' ?",
+        "answer": "Non, pas du tout ! Les heuristiques mentales (comme l'ancrage ou la disponibilité) ne sont pas des 'bugs' stupides : ce sont des règles de pouce évolutives très efficaces qui permettent au cerveau humain de prendre des décisions rapides et généralement adaptées avec un budget énergétique infime. Le problème survient lorsque ces heuristiques sont confrontées à des systèmes complexes modernes (marchés financiers, statistiques de risque, régimes de retraite)."
+      },
+      {
+        "question": "Qu'est-ce qu'un exemple concret de Nudge efficace ?",
+        "answer": "L'exemple le plus célèbre est le passage de l'épargne retraite aux États-Unis de l'adhésion volontaire (Opt-In) à l'adhésion par défaut automatique (Opt-Out, programme 'Save More Tomorrow' de Richard Thaler). Sans rien imposer et en laissant à chacun la possibilité de se désinscrire en cochant une case, le taux de participation à l'épargne retraite chez les salariés est passé de 49% à 86%."
+      },
+      {
+        "question": "Pourquoi les banques centrales et les gouvernements utilisent-ils encore des modèles néoclassiques ?",
+        "answer": "Parce que modéliser l'économie globale nécessite des équations mathématiques fermées et calculables (modèles DSGE). L'économie comportementale est formidable pour diagnostiquer précisément des écarts à la rationalité, mais il est beaucoup plus difficile d'en faire un modèle mathématique universel d'équilibre général aussi maniable que le modèle néoclassique."
+      }
+    ],
     "positions": [
       {
-        "name": "Paradigme Néoclassique & Théorie du Choix Rationnel",
-        "summary": "Même si les individus font ponctuellement des erreurs, celles-ci se neutralisent au niveau agrégé par les forces du marché et les incitations concurrentielles. L'hypothèse de rationalité reste le socle prédictif le plus robuste, parcimonieux et universel.",
-        "keyFigures": ["Gary Becker", "Milton Friedman", "Eugene Fama"]
+        "name": "Paradigme Néoclassique & Choix Rationnel",
+        "summary": "Même si les agents individuels commettent des erreurs, celles-ci sont non biaisées et neutralisées à l'échelle agrégée par les mécanismes d'arbitrage et la concurrence de marché. L'hypothèse de rationalité reste le socle prédictif le plus robuste et parcimonieux.",
+        "keyArguments": [
+          "L'hypothèse 'as if' (comme si) : un joueur de billard ne calcule pas les équations différentielles de la physique, mais ses boules roulent 'comme s'il' les calculait ; les agents agissent pareillement.",
+          "La concurrence et la faillite éliminent les acteurs non rationnels sur le long terme.",
+          "C'est la seule méthode qui évite l'arbitraire psychologique et permet une formalisation mathématique cohérente de l'économie."
+        ],
+        "counterCritique": "Reproche adressé au comportementalisme : 'L'économie comportementale est une collection fascinante d'anomalies de laboratoire qui s'évaporent dès que les enjeux financiers deviennent réels et que les agents apprennent par la répétition sur le marché.'",
+        "keyFigures": [
+          "Gary Becker",
+          "Milton Friedman",
+          "Eugene Fama",
+          "Kenneth Arrow"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade B",
+          "levelText": "Niveau 2 — Présomption scientifique",
+          "justification": "Modèle prédictif très solide sur les marchés d'actifs financiers très liquides, hautement concurrentiels et répétés à fréquence élevée. Cependant, systématiquement réfuté au niveau micro-décisionnel individuel et lors des krachs systémiques."
+        }
       },
       {
         "name": "Économie Comportementale & Rationalité Limitée",
-        "summary": "Les agents humains opèrent sous contraintes cognitives et temporelles en mobilisant des raccourcis heuristiques qui engendrent des déviations systématiques et prédictibles (aversion aux pertes, surconfiance, ancrage, comptabilité mentale).",
-        "keyFigures": ["Daniel Kahneman", "Amos Tversky", "Herbert Simon", "Richard Thaler"]
+        "summary": "Les agents humains opèrent sous contraintes cognitives et temporelles en mobilisant des heuristiques qui engendrent des déviations systématiques et mesurables (aversion aux pertes, biais de cadrage, actualisation hyperbolique).",
+        "keyArguments": [
+          "Les biais cognitifs ne sont pas aléatoires, ils sont systématiques, prévisibles et cumulatifs à l'échelle macroéconomique.",
+          "L'arbitrage sur les marchés financiers est limité par le risque et ne permet pas d'empêcher les bulles et les krachs.",
+          "La théorie des perspectives offre une description mathématique incomparablement plus fidèle de la décision sous risque."
+        ],
+        "counterCritique": "Reproche adressé aux néoclassiques : 'S'accrocher à l'homo economicus par amour de la beauté mathématique ressemble à la physique ptolémaïque qui ajoutait des épicycles pour préserver le géocentrisme face aux observations télescopiques.'",
+        "keyFigures": [
+          "Daniel Kahneman",
+          "Amos Tversky",
+          "Herbert Simon",
+          "Richard Thaler",
+          "Robert Shiller"
+        ],
+        "evidenceLevel": {
+          "grade": "Grade A",
+          "levelText": "Niveau 1 — Preuve scientifique établie",
+          "justification": "Preuve scientifique établie par des centaines d'essais contrôlés randomisés répliqués à l'échelle internationale (effet d'ancrage, aversion aux pertes, framing). Confirmations massives sur le terrain via les politiques d'épargne et de santé publique (Nudges)."
+        }
       }
     ],
     "readings": [
@@ -236,31 +890,39 @@
         "type": "Vulgarisation réflexive majeure",
         "author": "Daniel Kahneman (Flammarion)",
         "link": "https://editions.flammarion.com/systeme-1-systeme-2/9782081211477",
-        "note": "Le panorama complet et captivant des mécanismes cognitifs influençant nos jugements et nos décisions sous incertitude."
+        "note": "Le tour d'horizon accessible de l'architecture cognitive de la prise de décision.",
+        "evidenceGrade": "Grade B",
+        "evidenceLevel": "Niveau 2"
       },
       {
         "level": "Moyen",
         "title": "Judgment under Uncertainty: Heuristics and Biases",
         "type": "Article de référence",
-        "author": "Amos Tversky & Daniel Kahneman (Science, 1974)",
+        "author": "Tversky & Kahneman (Science, 1974)",
         "link": "https://doi.org/10.1126/science.185.4157.1124",
-        "note": "L'article séminal ayant formellement identifié les heuristiques de représentativité, de disponibilité et d'ancrage."
+        "note": "L'article séminal ayant défini les heuristiques de représentativité, d'ancrage et de disponibilité.",
+        "evidenceGrade": "Grade A",
+        "evidenceLevel": "Niveau 1"
       },
       {
         "level": "Difficile",
         "title": "Prospect Theory: An Analysis of Decision under Risk",
         "type": "Article fondateur de modélisation",
-        "author": "Daniel Kahneman & Amos Tversky (Econometrica, 1979)",
+        "author": "Kahneman & Tversky (Econometrica, 1979)",
         "link": "https://doi.org/10.2307/1914185",
-        "note": "Formalisation mathématique de la fonction de valeur en S remplaçant la théorie classique de l'utilité espérée."
+        "note": "Formalisation mathématique de la valeur en S et de la pondération non linéaire des probabilités.",
+        "evidenceGrade": "Grade A",
+        "evidenceLevel": "Niveau 1"
       },
       {
         "level": "Expert",
         "title": "Advances in Behavioral Economics",
-        "type": "Traité théorique et empirique",
-        "author": "Colin F. Camerer, George Loewenstein & Matthew Rabin (Princeton University Press)",
+        "type": "Traité contemporain",
+        "author": "Camerer, Loewenstein & Rabin (Princeton University Press)",
         "link": "https://press.princeton.edu/books/paperback/9780691116822/advances-in-behavioral-economics",
-        "note": "La somme académique intégrant la neuroéconomie, les jeux stratégiques et les équilibres de marché comportementaux."
+        "note": "Somme académique intégrant la neuroéconomie et la théorie des jeux comportementale.",
+        "evidenceGrade": "Grade A",
+        "evidenceLevel": "Niveau 1"
       }
     ]
   }
